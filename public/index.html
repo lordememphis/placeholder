@@ -17,33 +17,35 @@
     />
   </head>
   <body class="font-gilmer text-primary-900">
-    <header class="container mx-auto clearfix py-6">
-      <div class="float-left">
-        <a href="http://irusedge.com">
-          <img
-            src="./img/logo_no_tagline.png"
-            alt="Irus Edge Logo"
-            class="h-10"
-          />
-        </a>
+    <header class="py-6">
+      <div class="px-2 container mx-auto flex items-center justify-between">
+        <div class="flex">
+          <a href="http://irusedge.com">
+            <img
+              src="./img/logo_no_tagline.png"
+              alt="Irus Edge Logo"
+              class="h-10 bg-white"
+            />
+          </a>
+        </div>
+        <nav>
+          <a
+            href="mailto:enquiries@irusedge.com"
+            target="_blank"
+            class="py-2 px-5 bg-primary-900 text-white font-g-bold rounded-sm text-lg"
+            >Get Started</a
+          >
+        </nav>
       </div>
-      <nav class="float-right flex items-center justify-between flex-wrap">
-        <a
-          href="mailto:enquiries@irusedge.com"
-          target="_blank"
-          class="py-2 px-5 bg-primary-900 text-white font-g-bold rounded-sm text-lg"
-          >Get Started</a
-        >
-      </nav>
     </header>
     <main>
       <section class="bg-white py-24">
         <div class="container mx-auto flex">
-          <div class="w-2/4">
-            <h1 class="text-6xl font-ps-bold mb-4">
+          <div class="px-4 w-full text-center sm:w-2/4 md:text-left">
+            <h1 class="text-4xl lg:text-6xl font-ps-bold mb-4">
               Experience Design
             </h1>
-            <p class="text-3xl text-primary-800">
+            <p class="text-lg md:text-3xl text-primary-800">
               Products, processes, services, events, omnichannel journeys, and
               environments with a focus placed on the quality of the user
               experience and culturally relevant solutions; driven by a multiple
@@ -51,11 +53,11 @@
             </p>
             <a
               href="mailto:enquiries@irusedge.com"
-              class="inline-block px-5 py-2 mt-16 bg-accent-900 text-white rounded-sm font-g-bold text-white text-lg"
+              class="px-5 py-2 mt-6 lg:mt-16 inline-block bg-accent-900 text-white rounded-sm font-g-bold text-white text-lg"
               >Let's Collaborate</a
             >
           </div>
-          <div class="w-2/4">
+          <div class="hidden sm:block sm:w-2/4">
             <img
               src="./img/undraw_experience_design_eq3j_accent.svg"
               alt="experience design"
@@ -63,11 +65,11 @@
           </div>
         </div>
       </section>
-      <section class="bg-accent-50 py-20">
+      <section class="py-20 px-4 md:px-0 bg-accent-50">
         <div class="container mx-auto">
           <div class="pb-4">
-            <h1 class="font-ps-bold text-5xl">Services</h1>
-            <p class="font-gilmer text-2xl w-2/3">
+            <h1 class="font-ps-bold text-3xl md:text-5xl">Services</h1>
+            <p class="mt-4 text-lg font-g-medium md:font-gilmer text-base md:text-2xl md:w-2/3">
               With much focus on helping create the most top-drawer brands, our
               work and services spans across the design and development
               spectrum; from branding, web design and development to social
@@ -75,13 +77,13 @@
             </p>
           </div>
           <div>
-            <div class="flex mb-4">
-              <div class="w-1/3 p-4">
+            <div class="md:mb-4 flex flex-col md:flex-row">
+              <div class="mb-4 md:mb-0 md:p-4 md:w-1/3">
                 <div class="bg-white rounded shadow-2xl p-8 pb-12">
                   <img
                     src="./img/undraw_logo_design_bjnx_accent.svg"
                     alt="Branding and identity"
-                    class="w-40 h-40 mb-4"
+                    class="w-24 h-24 md:w-40 md:h-40 mb-4"
                   />
                   <div>
                     <h1 class="text-2xl font-productsans mb-3 capitalize">
@@ -95,12 +97,12 @@
                   </div>
                 </div>
               </div>
-              <div class="w-1/3 p-4">
+              <div class="mb-4 md:mb-0 md:w-1/3 md:p-4">
                 <div class="bg-white rounded shadow-2xl p-8 pb-12">
                   <img
                     src="./img/undraw_website_setup_5hr2_purple.svg"
                     alt="Web Design and Development"
-                    class="w-40 h-40 mb-4"
+                    class="w-24 h-24 md:w-40 md:h-40 mb-4"
                   />
                   <div>
                     <h1 class="text-2xl font-productsans mb-3 capitalize">
@@ -114,12 +116,12 @@
                   </div>
                 </div>
               </div>
-              <div class="w-1/3 p-4">
+              <div class="mb-4 md:mb-0 md:w-1/3 md:p-4">
                 <div class="bg-white rounded shadow-2xl p-8 pb-12">
                   <img
                     src="./img/undraw_prototyping_process_rswj_blue.svg"
                     alt="UI/UX Design"
-                    class="w-40 h-40 mb-4"
+                    class="w-24 h-24 md:w-40 md:h-40 mb-4"
                   />
                   <div>
                     <p class="text-2xl font-productsans mb-3 capitalize">
@@ -134,13 +136,13 @@
                 </div>
               </div>
             </div>
-            <div class="flex mb-4">
-              <div class="w-1/3 p-4">
+            <div class="flex flex-col md:flex-row mb-4">
+              <div class="mb-4 md:mb-0 md:w-1/3 md:p-4">
                 <div class="bg-white rounded shadow-2xl p-8 pb-12">
                   <img
                     src="./img/undraw_add_color_19gv_yellow.svg"
                     alt="Graphics Design"
-                    class="w-40 h-40 mb-4"
+                    class="w-24 h-24 md:w-40 md:h-40 mb-4"
                   />
                   <div>
                     <p class="text-2xl font-productsans mb-3 capitalize">
@@ -154,12 +156,12 @@
                   </div>
                 </div>
               </div>
-              <div class="w-1/3 p-4">
+              <div class="mb-4 md:mb-0 md:w-1/3 md:p-4">
                 <div class="bg-white rounded shadow-2xl p-8 pb-12">
                   <img
                     src="./img/undraw_social_dashboard_k3pt_red.svg"
                     alt="Branding and identity"
-                    class="w-40 h-40 mb-4"
+                    class="w-24 h-24 md:w-40 md:h-40 mb-4"
                   />
                   <div>
                     <p class="text-2xl font-productsans mb-3 capitalize">
@@ -177,65 +179,69 @@
           </div>
         </div>
       </section>
-      <section class="clients py-20">
+      <section class="clients py-20 px-4 md:px-0 mx-auto">
         <div class="container mx-auto">
           <div class="pb-4">
-            <h1 class="font-ps-bold text-5xl">Clients</h1>
-            <p class="font-gilmer text-2xl w-2/3">
+            <h1 class="font-ps-bold text-3xl md:text-5xl">Clients</h1>
+            <p class="mt-4 text-lg font-g-medium md:font-gilmer text-base md:text-2xl md:w-2/3">
               Some of the clients we've worked and collaborated with.
             </p>
           </div>
-          <div class="flex pt-10">
-            <div class="w-1/6 p-4">
-              <img
-                src="./img/alphastone.png"
-                alt="Alphastone Minerals"
-                class="w-32 h-32 mx-auto"
-              />
+          <div class="pt-10 flex flex-col md:flex-row">
+            <div class="mb-4 flex md:mb-0 md:w-1/2">
+              <div class="p-4 w-1/3">
+                <img
+                  src="./img/alphastone.png"
+                  alt="Alphastone Minerals"
+                  class="w-24 h-24 md:w-32 md:h-32 mx-auto"
+                />
+              </div>
+              <div class="p-4 w-1/3">
+                <img
+                  src="./img/coinsecurity.png"
+                  alt="Coin Security"
+                  class="w-24 h-24 md:w-32 md:h-32 mx-auto"
+                />
+              </div>
+              <div class="p-4 w-1/3">
+                <img
+                  src="./img/kenvim.png"
+                  alt="Kenvim Private Tutorials"
+                  class="w-24 h-24 md:w-32 md:h-32 mx-auto"
+                />
+              </div>
             </div>
-            <div class="w-1/6 p-4">
-              <img
-                src="./img/coinsecurity.png"
-                alt="Coin Security"
-                class="w-32 h-32 mx-auto"
-              />
-            </div>
-            <div class="w-1/6 p-4">
-              <img
-                src="./img/kenvim.png"
-                alt="Kenvim Private Tutorials"
-                class="w-32 h-32 mx-auto"
-              />
-            </div>
-            <div class="w-1/6 p-4">
-              <img
-                src="./img/lifestar.png"
-                alt="Lifestar"
-                class="w-40 h-40 mx-auto"
-              />
-            </div>
-            <div class="w-1/6 p-4">
-              <img
-                src="./img/royalintersec.png"
-                alt="Royal Intersec"
-                class="w-40 h-40 mx-auto"
-              />
-            </div>
-            <div class="w-1/6 p-4">
-              <img
-                src="./img/transcare.png"
-                alt="Transcare Medical Services"
-                class="w-40 h-40 mx-auto"
-              />
+            <div class="mb-4 flex md:mb-0 md:w-1/2">
+              <div class="p-4 w-1/3">
+                <img
+                  src="./img/lifestar.png"
+                  alt="Lifestar"
+                  class="w-24 h-24 md:w-40 md:h-40 mx-auto"
+                />
+              </div>
+              <div class="p-4 w-1/3">
+                <img
+                  src="./img/royalintersec.png"
+                  alt="Royal Intersec"
+                  class="w-24 h-24 md:w-40 md:h-40 mx-auto"
+                />
+              </div>
+              <div class="p-4 w-1/3">
+                <img
+                  src="./img/transcare.png"
+                  alt="Transcare Medical Services"
+                  class="w-24 h-24 md:w-40 md:h-40 mx-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="py-20">
-        <div class="container mx-auto bg-yellow-900 p-12 flex rounded-lg">
-          <div class="w-2/3">
-            <h1 class="font-ps-bold text-5xl text-white">You're Interested!</h1>
-            <p class="font-gilmer text-2xl text-white">
+      <section class="py-20 px-4">
+        <div class="p-6 md:p-12 flex flex-col md:flex-row container mx-auto bg-yellow-900 rounded-lg">
+          <div class="md:w-2/3">
+            <h1 class="font-ps-bold text-3xl md:text-5xl text-white">You're Interested!</h1>
+            <p class="mt-4 text-lg font-g-medium md:font-gilmer text-base md:text-2xl text-white">
               You know you can bet your money on us. Start using our services
               today and get that brand or site up and running in no time. It's
               just a click below!
@@ -243,11 +249,11 @@
             <a
               href="mailto:enquiries@irusedge.com"
               target="_blank"
-              class="inline-block mt-6 py-2 px-5 bg-purple-900 text-white font-g-bold rounded-sm text-lg"
+              class="inline-block mt-10 md:mt-6 py-2 px-5 mb-16 md:mb-0 bg-purple-900 text-white font-g-bold rounded-sm text-lg"
               >Make an Enquiry</a
             >
           </div>
-          <div class="w-1/3">
+          <div class="md:w-1/3">
             <img
               src="./img/undraw_superhero_kguv.svg"
               alt="Branding and identity"
@@ -256,30 +262,30 @@
         </div>
       </section>
     </main>
-    <footer class="py-20">
-      <div class="container mx-auto flex">
-        <div class="w-2/3">
+    <footer class="pt-20 md:py-20 px-4">
+      <div class="container mx-auto flex flex-col">
+        <div class="md:w-2/3">
           <div class="flex mb-4">
             <div class="w-1/3">
-              <h3 class="text-2xl font-productsans mb-3">Irus Edge</h3>
+              <h3 class="mb-2 md:mb-3 text-xl md:text-2xl font-productsans">Irus Edge</h3>
               <ul>
                 <li>
                   <a
                     href="http://irusedge.com"
-                    class="inline-block py-2 text-lg font-g-medium"
+                    class="inline-block md:py-2 md:text-lg font-g-medium"
                     >Home</a
                   >
                 </li>
               </ul>
             </div>
             <div class="w-1/3">
-              <h3 class="text-2xl font-productsans mb-3">Contact</h3>
+              <h3 class="mb-2 md:mb-3 text-xl md:text-2xl font-productsans">Contact</h3>
               <ul>
                 <li>
                   <a
                     href="mailto:enquiries@irusedge.com"
                     target="_blank"
-                    class="inline-block py-2 text-lg font-g-medium"
+                    class="inline-block md:py-2 md:text-lg font-g-medium"
                     >Email</a
                   >
                 </li>
@@ -287,20 +293,20 @@
                   <a
                     href="https://wa.me/263772516041"
                     target="_blank"
-                    class="inline-block py-2 text-lg font-g-medium"
+                    class="inline-block md:py-2 md:text-lg font-g-medium"
                     >WhatsApp</a
                   >
                 </li>
               </ul>
             </div>
             <div class="w-1/3">
-              <h3 class="text-2xl font-productsans mb-3">Social</h3>
+              <h3 class="mb-2 md:mb-3 text-xl md:text-2xl font-productsans">Social</h3>
               <ul>
                 <li>
                   <a
                     href="https://www.facebook.com/irusedge.da/"
                     target="_blank"
-                    class="inline-block py-2 text-lg font-g-medium"
+                    class="inline-block md:py-2 md:text-lg font-g-medium"
                     >Facebook</a
                   >
                 </li>
@@ -308,7 +314,7 @@
                   <a
                     href="https://www.instagram.com/irusedge.da/"
                     target="_blank"
-                    class="inline-block py-2 text-lg font-g-medium"
+                    class="inline-block md:py-2 md:text-lg font-g-medium"
                     >Instagram</a
                   >
                 </li>
@@ -316,7 +322,7 @@
                   <a
                     href="https://twitter.com/irusedge"
                     target="_blank"
-                    class="inline-block py-2 text-lg font-g-medium"
+                    class="inline-block md:py-2 md:text-lg font-g-medium"
                     >Twitter</a
                   >
                 </li>
@@ -324,7 +330,7 @@
             </div>
           </div>
         </div>
-        <div class="w-1/3">
+        <div class="md:w-1/3">
           <img src="./img/undraw_a_whole_year_vnfm_red.svg" alt="Thank You" />
         </div>
       </div>
