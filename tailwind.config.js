@@ -333,13 +333,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      gilmer: ["Gilmer", "helvetica", "sans-serif"],
-      "g-bold": ["GilmerBold", "helvetica", "sans-serif"],
-      "g-heavy": ["GilmerHeavy", "helvetica", "sans-serif"],
-      "g-light": ["GilmerLight", "helvetica", "sans-serif"],
-      "g-medium": ["GilmerMedium", "helvetica", "sans-serif"],
-      productsans: ["ProductSans", "helvetica", "sans-serif"],
-      "ps-bold": ["ProductSansBold", "helvetica", "sans-serif"]
+      inter: ["Inter", "sans-serif"]
     }
   },
   variants: {},

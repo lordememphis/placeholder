@@ -8061,32 +8061,8 @@ video {
   clear: both;
 }
 
-.font-gilmer {
-  font-family: Gilmer, helvetica, sans-serif;
-}
-
-.font-g-bold {
-  font-family: GilmerBold, helvetica, sans-serif;
-}
-
-.font-g-heavy {
-  font-family: GilmerHeavy, helvetica, sans-serif;
-}
-
-.font-g-light {
-  font-family: GilmerLight, helvetica, sans-serif;
-}
-
-.font-g-medium {
-  font-family: GilmerMedium, helvetica, sans-serif;
-}
-
-.font-productsans {
-  font-family: ProductSans, helvetica, sans-serif;
-}
-
-.font-ps-bold {
-  font-family: ProductSansBold, helvetica, sans-serif;
+.font-inter {
+  font-family: Inter, sans-serif;
 }
 
 .font-hairline {
@@ -32836,32 +32812,8 @@ video {
     clear: both;
   }
 
-  .sm\:font-gilmer {
-    font-family: Gilmer, helvetica, sans-serif;
-  }
-
-  .sm\:font-g-bold {
-    font-family: GilmerBold, helvetica, sans-serif;
-  }
-
-  .sm\:font-g-heavy {
-    font-family: GilmerHeavy, helvetica, sans-serif;
-  }
-
-  .sm\:font-g-light {
-    font-family: GilmerLight, helvetica, sans-serif;
-  }
-
-  .sm\:font-g-medium {
-    font-family: GilmerMedium, helvetica, sans-serif;
-  }
-
-  .sm\:font-productsans {
-    font-family: ProductSans, helvetica, sans-serif;
-  }
-
-  .sm\:font-ps-bold {
-    font-family: ProductSansBold, helvetica, sans-serif;
+  .sm\:font-inter {
+    font-family: Inter, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -57612,32 +57564,8 @@ video {
     clear: both;
   }
 
-  .md\:font-gilmer {
-    font-family: Gilmer, helvetica, sans-serif;
-  }
-
-  .md\:font-g-bold {
-    font-family: GilmerBold, helvetica, sans-serif;
-  }
-
-  .md\:font-g-heavy {
-    font-family: GilmerHeavy, helvetica, sans-serif;
-  }
-
-  .md\:font-g-light {
-    font-family: GilmerLight, helvetica, sans-serif;
-  }
-
-  .md\:font-g-medium {
-    font-family: GilmerMedium, helvetica, sans-serif;
-  }
-
-  .md\:font-productsans {
-    font-family: ProductSans, helvetica, sans-serif;
-  }
-
-  .md\:font-ps-bold {
-    font-family: ProductSansBold, helvetica, sans-serif;
+  .md\:font-inter {
+    font-family: Inter, sans-serif;
   }
 
   .md\:font-hairline {
@@ -82388,32 +82316,8 @@ video {
     clear: both;
   }
 
-  .lg\:font-gilmer {
-    font-family: Gilmer, helvetica, sans-serif;
-  }
-
-  .lg\:font-g-bold {
-    font-family: GilmerBold, helvetica, sans-serif;
-  }
-
-  .lg\:font-g-heavy {
-    font-family: GilmerHeavy, helvetica, sans-serif;
-  }
-
-  .lg\:font-g-light {
-    font-family: GilmerLight, helvetica, sans-serif;
-  }
-
-  .lg\:font-g-medium {
-    font-family: GilmerMedium, helvetica, sans-serif;
-  }
-
-  .lg\:font-productsans {
-    font-family: ProductSans, helvetica, sans-serif;
-  }
-
-  .lg\:font-ps-bold {
-    font-family: ProductSansBold, helvetica, sans-serif;
+  .lg\:font-inter {
+    font-family: Inter, sans-serif;
   }
 
   .lg\:font-hairline {
@@ -107164,32 +107068,8 @@ video {
     clear: both;
   }
 
-  .xl\:font-gilmer {
-    font-family: Gilmer, helvetica, sans-serif;
-  }
-
-  .xl\:font-g-bold {
-    font-family: GilmerBold, helvetica, sans-serif;
-  }
-
-  .xl\:font-g-heavy {
-    font-family: GilmerHeavy, helvetica, sans-serif;
-  }
-
-  .xl\:font-g-light {
-    font-family: GilmerLight, helvetica, sans-serif;
-  }
-
-  .xl\:font-g-medium {
-    font-family: GilmerMedium, helvetica, sans-serif;
-  }
-
-  .xl\:font-productsans {
-    font-family: ProductSans, helvetica, sans-serif;
-  }
-
-  .xl\:font-ps-bold {
-    font-family: ProductSansBold, helvetica, sans-serif;
+  .xl\:font-inter {
+    font-family: Inter, sans-serif;
   }
 
   .xl\:font-hairline {
