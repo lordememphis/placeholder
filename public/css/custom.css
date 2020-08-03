@@ -1,0 +1,11 @@
+.rfq-form {
+  width: 650px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.x {
+  right: -10px;
+  top: -10px;
+}
