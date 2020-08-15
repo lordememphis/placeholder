@@ -1,6 +1,66 @@
 module.exports = {
   theme: {
+    customForms: (theme) => ({
+      default: {
+        input: {
+          borderWidth: theme("borderWidth.2"),
+          borderColor: theme("colors.shadow-blue"),
+          borderRadius: theme("borderRadius.md"),
+          backgroundColor: theme("colors.white"),
+          marginTop: theme("spacing.1"),
+          width: theme("width.full"),
+          "&:focus": {
+            borderColor: theme("colors.rich-black-forga"),
+            boxShadow: theme("boxShadow.none"),
+          },
+        },
+        select: {
+          borderRadius: theme("borderRadius.lg"),
+          boxShadow: theme("boxShadow.default"),
+        },
+        checkbox: {
+          width: theme("spacing.5"),
+          height: theme("spacing.5"),
+          borderWidth: theme("borderWidth.2"),
+          borderColor: theme("colors.shadow-blue"),
+          borderRadius: theme("borderRadius.default"),
+          backgroundColor: theme("colors.white"),
+          marginTop: theme("spacing.1"),
+          "&:focus": {
+            borderColor: theme("colors.rich-black-forga"),
+            boxShadow: theme("boxShadow.none"),
+          },
+        },
+        radio: {
+          width: theme("spacing.5"),
+          height: theme("spacing.5"),
+          borderWidth: theme("borderWidth.2"),
+          borderColor: theme("colors.shadow-blue"),
+          backgroundColor: theme("colors.white"),
+          marginTop: theme("spacing.1"),
+          "&:focus": {
+            borderColor: theme("colors.rich-black-forga"),
+            boxShadow: theme("boxShadow.none"),
+          },
+        },
+        textarea: {
+          borderWidth: theme("borderWidth.2"),
+          borderColor: theme("colors.shadow-blue"),
+          borderRadius: theme("borderRadius.md"),
+          backgroundColor: theme("colors.white"),
+          marginTop: theme("spacing.1"),
+          width: theme("width.full"),
+          "&:focus": {
+            borderColor: theme("colors.rich-black-forga"),
+            boxShadow: theme("boxShadow.none"),
+          },
+        },
+      },
+    }),
     extend: {
+      boxShadow: {
+        focus: "0 0 0 3px rgba(8, 28, 36, .75)",
+      },
       colors: {
         emerald: "#01D277",
         "rich-black-forga": "#081c24",
@@ -31,5 +91,5 @@ module.exports = {
     opacity: ["responsive", "hover", "focus", "group-hover"],
     display: ["responsive", "hover", "focus", "group-hover"],
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/custom-forms")],
 };
