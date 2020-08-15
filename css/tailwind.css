@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+  @apply py-3 px-5 text-base font-semibold rounded-md;
+}
+
+.btn:focus {
+  @apply outline-none;
+}
+
+.link {
+  @apply .btn;
+}
+
 @tailwind utilities;
