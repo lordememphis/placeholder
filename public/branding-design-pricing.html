@@ -18,113 +18,109 @@
       </div>
       <nav class="flex items-center font-semibold">
         <a href="#" class="px-4 text-base">Services</a>
-        <button id="pkg-btn" class="px-4 font-semibold focus:outline-none">
+        <button id="btn-bundles" class="px-4 font-semibold focus:outline-none">
           <div class="flex items-center">
-            <span class="text-base">Packages</span>
+            <span class="text-base">Bundles</span>
             <figure class="ml-1">
-              <svg class="w-4 h-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              <svg class="w-3 h-3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M19 9l-7 7-7-7"></path>
               </svg>
             </figure>
           </div>
-          <!-- <button id="pkg-cancel" class="hidden fixed w-full h-full inset-0"></button> -->
-          <section id="pkg-dropdown"
-            class="hidden absolute z-20 p-6 mt-4 mr-12 right-0 bg-white text-left rounded-lg shadow-lg">
-            <div class="flex flex-col">
-              <header>
-                <h3 class="text-shadow-blue text-sm uppercase">Basic</h3>
-              </header>
-              <div class="mt-6 flex items-center group">
-                <figure class="text-shadow-blue group-hover:text-rich-black-forga">
-                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
-                    <path fill-rule="evenodd"
-                      d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </figure>
-                <div class="ml-3 text-sm group-hover:opacity-75">
-                  <h1>Branding & Design</h1>
-                  <span class="text-shadow-blue font-normal">Branding and identity strategy</span>
-                </div>
-              </div>
-              <div class="mt-4 flex items-center group">
-                <figure class="text-shadow-blue group-hover:text-rich-black-forga"><svg viewBox="0 0 20 20"
-                    fill="currentColor" class="w-8 h-8">
-                    <path fill-rule="evenodd"
-                      d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </figure>
-                <div class="ml-3 text-sm group-hover:opacity-75">
-                  <p>Web Development</p>
-                  <p class="text-shadow-blue font-normal">Realise your brand online</p>
-                </div>
-              </div>
-              <div class="mt-4 flex items-center group">
-                <figure class="text-shadow-blue group-hover:text-rich-black-forga"><svg viewBox="0 0 20 20"
-                    fill="currentColor" class="w-8 h-8">
-                    <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
-                    <path
-                      d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z">
-                    </path>
-                  </svg>
-                </figure>
-                <div class="ml-3 text-sm group-hover:opacity-75"">
-                  <p>Digital Marketing</p>
-                  <p class=" text-shadow-blue font-normal">Reach new markets</p>
-                </div>
-              </div>
-            </div>
-            <div class="ml-8 flex flex-col">
-              <h3 class="text-shadow-blue text-sm uppercase">Dual Combo</h3>
-              <div class="mt-6 flex items-center group">
-                <figure class="text-shadow-blue group-hover:text-rich-black-forga"><svg viewBox="0 0 20 20"
-                    fill="currentColor" class="w-8 h-8">
-                    <path fill-rule="evenodd"
-                      d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </figure>
-                <div class="ml-3 text-sm group-hover:opacity-75">
-                  <p>Branding, Design and Web Development</p>
-                  <p class="text-shadow-blue font-normal">Strategy to online presence</p>
-                </div>
-              </div>
-              <div class="mt-4 flex items-center group">
-                <figure class="text-shadow-blue group-hover:text-rich-black-forga"><svg viewBox="0 0 20 20"
-                    fill="currentColor" class="w-8 h-8">
-                    <path fill-rule="evenodd"
-                      d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </figure>
-                <div class="ml-3 text-sm group-hover:opacity-75">
-                  <p>Branding, Design and Digital Marketing</p>
-                  <p class="text-shadow-blue font-normal">Branding strategy and marketing</p>
-                </div>
-              </div>
-            </div>
-            <div class="ml-8 flex flex-col">
-              <h3 class="text-shadow-blue text-sm uppercase">Mega Combo</h3>
-              <div class="mt-6 flex items-center group">
-                <figure class="text-shadow-blue group-hover:text-rich-black-forga"><svg fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z">
-                    </path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path>
-                  </svg>
-                </figure>
-                <div class="ml-3 text-sm group-hover:opacity-75">
-                  <p>Branding, Web Development and Digital Marketing</p>
-                  <p class="text-shadow-blue font-normal">All inclusive package</p>
-                </div>
-              </div>
-            </div>
-          </section>
         </button>
+        <button id="btn-oricing" class="px-4 font-semibold focus:outline-none">
+          <div class="flex items-center">
+            <span class="text-base">Pricing</span>
+            <figure class="ml-1">
+              <svg class="w-3 h-3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </figure>
+          </div>
+        </button>
+        <!-- <button id="pkg-cancel" class="hidden fixed w-full h-full inset-0"></button> -->
+        <section id="dropdown-bundles"
+          class="flex absolute z-20 p-6 mt-16 mr-12 top-0 right-0 bg-white text-left rounded-lg shadow-lg">
+          <div class="flex flex-col">
+            <h3 class="text-shadow-blue text-sm uppercase">Dual Combo</h3>
+            <div class="mt-6 flex items-center group cursor-pointer">
+              <figure class="text-shadow-blue group-hover:text-emerald fill-current">
+                <svg class="w-12 h-12">
+                  <use href="img/flaticons.svg#icon-theme"></use>
+                </svg>
+              </figure>
+              <div class="ml-3 text-sm group-hover:opacity-75">
+                <p>Branding, Design and Web Development</p>
+                <p class="text-shadow-blue font-normal">Strategy to online presence</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center group cursor-pointer">
+              <figure class="text-shadow-blue group-hover:text-mikado-orange fill-current">
+                <svg class="w-12 h-12">
+                  <use href="img/flaticons.svg#icon-analysis"></use>
+                </svg>
+              </figure>
+              <div class="ml-3 text-sm group-hover:opacity-75">
+                <p>Branding, Design and Digital Marketing</p>
+                <p class="text-shadow-blue font-normal">Branding strategy and marketing</p>
+              </div>
+            </div>
+          </div>
+          <div class="ml-8 flex flex-col">
+            <h3 class="text-shadow-blue text-sm uppercase">Mega Combo</h3>
+            <div class="mt-6 flex items-center group cursor-pointer">
+              <figure class="text-shadow-blue group-hover:text-tart-orange fill-current">
+                <svg class="w-12 h-12">
+                  <use href="img/flaticons.svg#icon-startup"></use>
+                </svg>
+              </figure>
+              <div class="ml-3 text-sm group-hover:opacity-75">
+                <p>Branding, Web Development and Digital Marketing</p>
+                <p class="text-shadow-blue font-normal">All inclusive package</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="dropdown-pricing"
+          class="flex absolute z-20 p-6 mt-16 mr-12 top-0 right-0 bg-white text-left rounded-lg shadow-lg">
+          <div class="flex flex-col">
+            <div class="flex items-center group cursor-pointer">
+              <figure class="text-shadow-blue group-hover:text-tart-orange fill-current">
+                <svg class="w-12 h-12">
+                  <use href="img/flaticons.svg#icon-colour-palette"></use>
+                </svg>
+              </figure>
+              <div class="ml-3 text-sm group-hover:opacity-75">
+                <h1>Branding & Design</h1>
+                <span class="text-shadow-blue font-normal">Branding and identity strategy</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center group cursor-pointer">
+              <figure class="text-shadow-blue group-hover:text-mikado-orange fill-current">
+                <svg class="w-12 h-12">
+                  <use href="img/flaticons.svg#icon-website-3"></use>
+                </svg>
+              </figure>
+              <div class="ml-3 text-sm group-hover:opacity-75">
+                <p>Web Development</p>
+                <p class="text-shadow-blue font-normal">Realise your brand online</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center group cursor-pointer">
+              <figure class="text-shadow-blue group-hover:text-emerald fill-current">
+                <svg class="w-12 h-12">
+                  <use href="img/flaticons.svg#icon-social-media"></use>
+                </svg>
+              </figure>
+              <div class="ml-3 text-sm group-hover:opacity-75"">
+                <p>Digital Marketing</p>
+                <p class=" text-shadow-blue font-normal">Reach new markets</p>
+              </div>
+            </div>
+          </div>
+        </section>
         <button button class="btn ml-10 py-2 text-emerald bg-green-200 rounded-lg">
           Get Started
         </button>
