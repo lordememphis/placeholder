@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing | Web Development</title>
   <link rel="stylesheet" href="./build/styles.css" />
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- <style>
+    * {
+      border: 1px solid red
+    }
+  </style> -->
 </head>
 
 <body class="font-inter font-medium text-rich-black-forga text-lg">
@@ -141,7 +147,7 @@
     </section>
     <section class="py-20 bg-rich-black-forga">
       <div class="container mx-auto px-4">
-        <form class="p-8 bg-white rounded-sm">
+        <form id="package-form" class="p-8 bg-white rounded-sm">
           <header>
             <h2 class="text-3xl font-bold">What’d you need for this project?</h2>
             <p class="text-shadow-blue">Customise your branding and design package by selecting what you'll need from
@@ -152,143 +158,228 @@
             <section>
               <div class="flex items-center">
                 <figure>
-                  <svg class="w-6 h-6 text-tart-orange" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  <svg class="w-6 h-6 text-tart-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                      clip-rule="evenodd" />
                   </svg>
                 </figure>
                 <h2 class="ml-2 font-semibold text-xl">Design</h2>
               </div>
-              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-6">
-                <label for="selection-logo" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-logo" name="selection-logo" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Logo</span>
-                </label>
-                <label for="selection-cards" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-cards" name="selection-cards" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Business Cards</span>
-                </label>
-                <label for="selection-poster" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-poster" name="selection-poster" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Poster/Flyer</span>
-                </label>
-                <label for="selection-brochure" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-brochure" name="selection-brochure" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Brochure</span>
-                </label>
-                <label for="selection-illustration" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-illustration" name="selection-illustration" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Illustration</span>
-                </label>
-                <label for="selection-ads" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-ads" name="selection-ads" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Marketing Ads</span>
-                </label>
+              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-x-6 gap-y-8">
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="logo" id="design-logo" class="hidden cursor-pointer checkbox-input">
+                  <label for="design-logo"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Logo</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="businessCards" id="design-cards"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="design-cards"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Business
+                    Cards</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="poster" id="design-poster" class="hidden cursor-pointer checkbox-input">
+                  <label for="design-poster"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Poster/Flyer</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="brochure" id="design-brochure"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="design-brochure"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Brochure</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="illustration" id="design-illustration"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="design-illustration"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Illustration</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="marketingAds" id="design-ads"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="design-ads"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Marketing
+                    Ads</label>
+                </div>
               </div>
             </section>
             <section class="mt-10">
               <div class="flex items-center">
                 <figure>
-                  <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                      clip-rule="evenodd" />
                   </svg>
                 </figure>
                 <h2 class="ml-2 font-semibold text-xl">Branding</h2>
               </div>
-              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-6">
-                <label for="selection-vehicle" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-vehicle" name="selection-vehicle" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Vehicle Branding</span>
-                </label>
-                <label for="selection-teardrop" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-teardrop" name="selection-teardrop" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Teardrop Banner</span>
-                </label>
-                <label for="selection-rollup" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-rollup" name="selection-rollup" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Rollup Banner</span>
-                </label>
-                <label for="selection-gazebo" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-gazebo" name="selection-gazebo" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Gazebo</span>
-                </label>
-                <label for="selection-billboard" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-billboard" name="selection-billboard" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Billboard</span>
-                </label>
-                <label for="selection-packaging" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-packaging" name="selection-packaging" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Packaging</span>
-                </label>
-                <label for="selection-merch" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-merch" name="selection-merch" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Merch/Swag</span>
-                </label>
+              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-x-6 gap-y-8">
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="vehicleBranding" id="branding-vehicle"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-vehicle"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Vehicle
+                    Branding</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="teardropBanner" id="branding-teardrop"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-teardrop"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Teardrop
+                    Banner</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="rollupBanner" id="branding-rollup"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-rollup"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Rollup
+                    Banner</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="gazebo" id="branding-gazebo"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-gazebo"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Gazebo</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="billboard" id="branding-billboard"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-billboard"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Billboard</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="packaging" id="branding-packaging"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-packaging"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Packaging</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="merch" id="branding-merch" class="hidden cursor-pointer checkbox-input">
+                  <label for="branding-merch"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Merch/Swag</label>
+                </div>
               </div>
             </section>
             <section class="mt-10">
               <div class="flex items-center">
                 <figure>
-                  <svg class="w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                  <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+                      clip-rule="evenodd" />
+                    <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
                   </svg>
                 </figure>
                 <h2 class="ml-2 font-semibold text-xl">Stationery</h2>
               </div>
-              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-6">
-                <label for="selection-letterhead" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-letterhead" name="selection-letterhead" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Letterhead</span>
-                </label>
-                <label for="selection-profile" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-profile" name="selection-profile" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Company Profile</span>
-                </label>
-                <label for="selection-invoice" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-invoice" name="selection-invoice" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Invoice</span>
-                </label>
-                <label for="selection-receipt" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-receipt" name="selection-receipt" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Receipt Book</span>
-                </label>
-                <label for="selection-calendar" class="p-3 flex items-center border rounded-md cursor-pointer">
-                  <input id="selection-calendar" name="selection-calendar" type="checkbox"
-                    class="mt-0 form-checkbox text-rich-black-forga" />
-                  <span class="ml-2 text-base">Calendar</span>
-                </label>
+              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-x-6 gap-y-8">
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="letterhead" id="stationery-letterhead"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="stationery-letterhead"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Letterhead</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="companyProfile" id="stationery-profile"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="stationery-profile"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Company
+                    Profile</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="invoice" id="stationery-invoice"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="stationery-invoice"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Invoice</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="receiptBook" id="stationery-receipt-book"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="stationery-receipt-book"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Receipt
+                    Book</label>
+                </div>
+                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                  <input type="checkbox" name="calendar" id="stationery-calendar"
+                    class="hidden cursor-pointer checkbox-input">
+                  <label for="stationery-calendar"
+                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Calendar</label>
+                </div>
               </div>
             </section>
           </div>
           <footer class="mt-12">
             <div class="flex justify-between">
-              <button class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button>
+              <a id="calculate-cost" href="#estimate"><button
+                  class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button></a>
               <button type="reset" class="btn py-2 bg-red-200 text-tart-orange">Reset</button>
             </div>
           </footer>
         </form>
+      </div>
+      <div id="estimate" class="hidden container mx-auto mt-10">
+        <section class="mx-4 p-8 bg-white rounded-sm">
+          <header class="text-center">
+            <h4 class="font-bold text-3xl">Estimated Branding and Design Cost: $<span id="total">17,999.99</span></h4>
+            <div class="mt-4 inline-flex items-center">
+              <figure class="p-2 rounded-full bg-green-200 text-emerald">
+                <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+              </figure>
+              <span class="ml-2">Print incl.</span>
+            </div>
+          </header>
+          <div class="mt-8">
+            <div class="mt-4">
+              <div class="flex flex-col">
+                <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                  <div
+                    class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-md border-b border-gray-200">
+                    <table class="min-w-full divide-y divide-gray-200">
+                      <thead>
+                        <tr class="bg-gray-100">
+                          <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <h2 class="text-left text-sm font-semibold uppercase tracking-wider">Description</h2>
+                          </th>
+                          <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <h2 class="text-right text-sm font-semibold uppercase tracking-wider">Cost</h2>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody id="breakdown-container"></tbody>
+                      <tfoot id="breakdown-total"></tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="mt-8">
+            <div class="flex justify-between">
+              <a href="#package-form" class="btn inline-flex items-center bg-green-200 text-emerald">
+                <figure>
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                  </svg>
+                </figure>
+                <span class="ml-2">Edit</span>
+              </a>
+              <button class="btn text-emerald bg-rich-black-forga uppercase tracking-wide">
+                Request Project
+              </button>
+            </div>
+          </footer>
+        </section>
       </div>
     </section>
     <section class="py-20">
@@ -369,8 +460,8 @@
           </section>
         </section>
         <section class="w-1/2 flex">
-          <div class="grid grid-rows-1 grid-flow-col">
-            <div class="ml-4 mr-8 text-base">
+          <div class="grid grid-rows-1 grid-flow-col gap-x-4">
+            <div class="text-base">
               <header>
                 <figure>
                   <svg class="w-16 h-16 text-rich-black-forga stroke-current fill-current">
@@ -396,7 +487,7 @@
                 </button>
               </footer>
             </div>
-            <div class="ml-4 mr-8 text-base">
+            <div class="text-base">
               <header>
                 <figure>
                   <svg class="w-16 h-16 text-rich-black-forga stroke-current fill-current">
@@ -513,6 +604,107 @@
     </section>
   </footer>
   <script src="js/script.js"></script>
+  <script>
+    const checkboxes = document.querySelectorAll('.checkbox-input')
+
+    Array.from(checkboxes).forEach(checkbox => {
+      checkbox.addEventListener('click', e => {
+        if (checkbox.checked) checkbox.parentElement.classList.add('checked')
+        else checkbox.parentElement.classList.remove('checked')
+      })
+    })
+
+    const prices = {
+      "logo": ['Logo', 99.99],
+      "businessCards": ['Business Cards', 99.99],
+      "poster": ['Poster/Flyer', 199.99],
+      "brochure": ['Brochure', 99.99],
+      "illustration": ['Illustration', 99.99],
+      "marketingAds": ['Marketing Ads', 999.99],
+      "vehicleBranding": ['Vehicle Branding', 1999.99],
+      "teardropBanner": ['Teardrop Banner', 999.99],
+      "rollupBanner": ['Rollup Banner', 999.99],
+      "gazebo": ['Gazebo', 2999.99],
+      "billboard": ['Billboard', 2999.99],
+      "packaging": ['Packaging', 999.99],
+      "merch": ['Merch/Swag', 1499.99],
+      "letterhead": ['Letterhead', 349.99],
+      "companyProfile": ['Company Profile', 2499.99],
+      "invoice": ['Invoice', 249.99],
+      "receiptBook": ['Receipt Book', 249.99],
+      "calendar": ['Calendar', 349.99]
+    }
+
+    const form = document.querySelector('form')
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      const data = new FormData(form)
+      const package = Array.from(data.entries()).map(entry => entry[0]).map(entry => prices[entry])
+      const breakdownContainer = document.querySelector('#breakdown-container')
+
+      const currencyFormat = value => {
+        const splits = value.toFixed(2).split(".");
+        const integer = splits[0];
+        const decimal = splits[1];
+        const number = [];
+        const temp = [];
+
+        const b = integer.toString().split("");
+        for (let i = Math.ceil(integer.length / 3); i > 0; i--)
+          temp.push(b.splice(-3).join(""));
+        const x = temp.length;
+        for (let i = 0; i < x; i++) number.push(temp.pop());
+
+        return number.join(",") + "." + decimal;
+      };
+
+      if (package.length) {
+        document.querySelector('#estimate').classList.remove('hidden')
+        breakdownContainer.innerHTML = ''
+
+        // document.querySelector('#calculate-cost').setAttribute('href', '#')
+
+        package.forEach(item => {
+          breakdownContainer.insertAdjacentHTML('beforeend',
+            `
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">${item[0]}</td>
+              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right font-semibold">$${currencyFormat(item[1])}</td>
+            </tr>
+            `
+          )
+        })
+
+        let sum = 0
+        package.forEach(e => { sum += e[1] })
+        sum = currencyFormat(sum)
+
+        document.querySelector('#total').textContent = sum
+
+        breakdownContainer.insertAdjacentHTML('beforeend',
+          `
+            <tr class="bg-gray-100">
+              <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                <h2 class="text-left text-sm font-bold uppercase tracking-wider">Total</h2>
+              </th>
+              <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">$${sum}</th>
+            </tr>
+          `
+        )
+      } else {
+        document.querySelector('#estimate').classList.add('hidden')
+      }
+
+
+    })
+
+    form.addEventListener('reset', e => {
+      Array.from(document.querySelectorAll('.checkbox')).forEach(container => { container.classList.remove('checked') })
+      document.querySelector('#estimate').classList.add('hidden')
+    })
+
+
+  </script>
 </body>
 
 </html>
