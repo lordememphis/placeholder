@@ -152,7 +152,7 @@
       </div>
     </section>
     <section class="py-20 bg-rich-black-forga">
-      <div class="">
+      <div id="form-container">
         <form id="package-form" class="p-4 mx-4 bg-white rounded-sm">
           <header>
             <h2 class="text-2xl sm:text-3xl font-bold">What’d you need for this project?</h2>
@@ -330,9 +330,10 @@
         </form>
       </div>
       <div id="estimate" class="hidden container mx-auto mt-10">
-        <section class="mx-4 p-8 bg-white rounded-sm">
+        <section class="mx-4 p-4 sm:p-8 bg-white rounded-sm">
           <header class="text-center">
-            <h4 class="font-bold text-3xl">Estimated Branding and Design Cost: $<span id="total">17,999.99</span></h4>
+            <h4 class="font-bold text-2xl sm:text-3xl">Estimated Branding and Design Cost: $<span
+                id="total">17,999.99</span></h4>
             <div class="mt-4 inline-flex items-center">
               <figure class="p-2 rounded-full bg-green-200 text-emerald">
                 <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -347,16 +348,16 @@
           <div class="mt-8">
             <div class="mt-4">
               <div class="flex flex-col">
-                <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                <div class="-my-2 px-px py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                   <div
                     class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-md border-b border-gray-200">
-                    <table class="min-w-full divide-y divide-gray-200">
+                    <table class="min-w-full">
                       <thead>
                         <tr class="bg-gray-100">
-                          <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                          <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                             <h2 class="text-left text-sm font-semibold uppercase tracking-wider">Description</h2>
                           </th>
-                          <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                          <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                             <h2 class="text-right text-sm font-semibold uppercase tracking-wider">Cost</h2>
                           </th>
                         </tr>
@@ -371,7 +372,7 @@
           </div>
           <footer class="mt-8">
             <div class="flex justify-between">
-              <a href="#package-form" class="btn inline-flex items-center bg-green-200 text-emerald">
+              <a href="#package-form" id="edit-package" class="btn inline-flex items-center bg-green-200 text-emerald">
                 <figure>
                   <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path
@@ -402,7 +403,7 @@
             </div>
           </div>
           <footer class="mt-6 sm:mt-0 sm:ml-20 sm:flex-shrink-0">
-            <a href="#" class="btn py-4 inline-flex items-center bg-mat-blue-gray-100">
+            <a href="#" class="btn sm:py-4 inline-flex items-center bg-mat-blue-gray-100">
               <span class="font-semibold uppercase tracking-wider">Explore packages</span>
               <figure>
                 <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -649,7 +650,10 @@
       "calendar": ['Calendar', 349.99]
     }
 
+    const formContainer = document.querySelector('#form-container')
     const form = document.querySelector('form')
+    const estimateContainer = document.querySelector('#estimate')
+
     form.addEventListener('submit', e => {
       e.preventDefault()
       const data = new FormData(form)
@@ -673,7 +677,8 @@
       };
 
       if (package.length) {
-        document.querySelector('#estimate').classList.remove('hidden')
+        formContainer.classList.add('hidden')
+        estimateContainer.classList.remove('hidden')
         breakdownContainer.innerHTML = ''
 
         // document.querySelector('#calculate-cost').setAttribute('href', '#')
@@ -682,8 +687,8 @@
           breakdownContainer.insertAdjacentHTML('beforeend',
             `
             <tr>
-              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">${item[0]}</td>
-              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right font-semibold">$${currencyFormat(item[1])}</td>
+              <td class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">${item[0]}</td>
+              <td class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right font-semibold">$${currencyFormat(item[1])}</td>
             </tr>
             `
           )
@@ -698,15 +703,15 @@
         breakdownContainer.insertAdjacentHTML('beforeend',
           `
             <tr class="bg-gray-100">
-              <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+              <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                 <h2 class="text-left text-sm font-bold uppercase tracking-wider">Total</h2>
               </th>
-              <th class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">$${sum}</th>
+              <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">$${sum}</th>
             </tr>
           `
         )
       } else {
-        document.querySelector('#estimate').classList.add('hidden')
+        estimateContainer.classList.add('hidden')
       }
 
 
@@ -714,10 +719,13 @@
 
     form.addEventListener('reset', e => {
       Array.from(document.querySelectorAll('.checkbox')).forEach(container => { container.classList.remove('checked') })
-      document.querySelector('#estimate').classList.add('hidden')
+      estimateContainer.classList.add('hidden')
     })
 
-
+    document.querySelector('#edit-package').addEventListener('click', e => {
+      formContainer.classList.remove('hidden')
+      estimateContainer.classList.add('hidden')
+    })
   </script>
 </body>
 
