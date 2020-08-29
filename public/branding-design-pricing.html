@@ -153,7 +153,7 @@
     </section>
     <section class="py-20 bg-rich-black-forga">
       <div id="form-container">
-        <form id="package-form" class="p-4 mx-4 bg-white rounded-sm">
+        <form class="p-4 mx-4 bg-white rounded-sm">
           <header>
             <h2 class="text-2xl sm:text-3xl font-bold">What’d you need for this project?</h2>
             <p class="text-shadow-blue">Customise your branding and design package by selecting what you'll need from
@@ -322,14 +322,13 @@
           </div>
           <footer class="mt-12">
             <div class="flex justify-between">
-              <a id="calculate-cost" href="#estimate"><button
-                  class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button></a>
+              <button class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button>
               <button type="reset" class="btn py-2 bg-red-200 text-tart-orange">Reset</button>
             </div>
           </footer>
         </form>
       </div>
-      <div id="estimate" class="hidden container mx-auto mt-10">
+      <div id="estimate" class="hidden container mx-auto">
         <section class="mx-4 p-4 sm:p-8 bg-white rounded-sm">
           <header class="text-center">
             <h4 class="font-bold text-2xl sm:text-3xl">Estimated Branding and Design Cost: $<span
@@ -372,7 +371,7 @@
           </div>
           <footer class="mt-8">
             <div class="flex justify-between">
-              <a href="#package-form" id="edit-package" class="btn inline-flex items-center bg-green-200 text-emerald">
+              <button id="edit-package" class="btn inline-flex items-center bg-green-200 text-emerald">
                 <figure>
                   <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path
@@ -380,7 +379,7 @@
                   </svg>
                 </figure>
                 <span class="ml-2">Edit</span>
-              </a>
+              </button>
               <button class="btn text-emerald bg-rich-black-forga uppercase tracking-wide">
                 Request Project
               </button>
@@ -677,6 +676,8 @@
       };
 
       if (package.length) {
+        window.scroll({ top: 350, left: 0, behavior: "smooth" })
+
         formContainer.classList.add('hidden')
         estimateContainer.classList.remove('hidden')
         breakdownContainer.innerHTML = ''
@@ -723,6 +724,7 @@
     })
 
     document.querySelector('#edit-package').addEventListener('click', e => {
+      window.scroll({ top: 350, left: 0, behavior: "smooth" })
       formContainer.classList.remove('hidden')
       estimateContainer.classList.add('hidden')
     })
