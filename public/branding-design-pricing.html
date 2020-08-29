@@ -14,9 +14,9 @@
   </style> -->
 </head>
 
-<body class="font-inter font-medium text-rich-black-forga sm:text-lg">
+<body class="font-inter font-medium text-rich-black-forga laptop:text-lg">
   <div id="header-container" class="w-full z-10">
-    <header class="relative py-4 px-4 sm:px-12 bg-white">
+    <header class="relative py-4 px-4 laptop:px-8 bg-white">
       <div class="flex items-center justify-between">
         <section class="flex">
           <a href="#">
@@ -30,119 +30,121 @@
           </a>
         </section>
         <nav class="font-semibold">
-          <div>
-            <button id="toggle-menu" class="text-rich-black-forga focus:outline-none">
-              <figure>
-                <svg id="toggle-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </figure>
-            </button>
-          </div>
-          <section id="dropdown-menu"
-            class="hidden absolute z-30 bg-white shadow-lg w-full h-screen mt-3 right-0 transition-all duration-200 overflow-scroll"
-            style="padding-bottom: 10vh;">
-            <div class="px-4">
-              <div class="py-4">
-                <h2 class="text-sm uppercase">Services</h2>
-                <div class="mt-2">
-                  <div class="flex flex-col">
-                    <div class="flex items-center group cursor-pointer">
-                      <figure class="text-shadow-blue group-hover:text-tart-orange fill-current">
-                        <svg class="w-10 h-10">
-                          <use href="img/flaticons.svg#icon-colour-palette"></use>
-                        </svg>
-                      </figure>
-                      <div class="ml-3 text-sm group-hover:opacity-75">
-                        <h1>Branding & Design</h1>
-                        <span class="text-shadow-blue font-normal">Branding and identity strategy</span>
+          <section class="laptop:hidden">
+            <div>
+              <button id="toggle-menu" class="text-rich-black-forga focus:outline-none">
+                <figure>
+                  <svg id="toggle-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </figure>
+              </button>
+            </div>
+            <section id="dropdown-menu"
+              class="hidden absolute z-30 bg-white shadow-lg w-full h-screen pt-8 right-0 transition-all duration-200 overflow-scroll"
+              style="padding-bottom: 10vh;">
+              <div class="px-4">
+                <div class="py-4">
+                  <h2 class="text-sm uppercase">Services</h2>
+                  <div class="mt-2">
+                    <div class="flex flex-col">
+                      <div class="flex items-center group cursor-pointer">
+                        <figure class="text-shadow-blue group-hover:text-tart-orange fill-current">
+                          <svg class="w-10 h-10">
+                            <use href="img/flaticons.svg#icon-colour-palette"></use>
+                          </svg>
+                        </figure>
+                        <div class="ml-3 text-sm group-hover:opacity-75">
+                          <h1>Branding & Design</h1>
+                          <span class="text-shadow-blue font-normal">Branding and identity strategy</span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="mt-4 flex items-center group cursor-pointer">
-                      <figure class="text-shadow-blue group-hover:text-mikado-orange fill-current">
-                        <svg class="w-10 h-10">
-                          <use href="img/flaticons.svg#icon-website-3"></use>
-                        </svg>
-                      </figure>
-                      <div class="ml-3 text-sm group-hover:opacity-75">
-                        <p>Web Development</p>
-                        <p class="text-shadow-blue font-normal">Realise your brand online</p>
+                      <div class="mt-4 flex items-center group cursor-pointer">
+                        <figure class="text-shadow-blue group-hover:text-mikado-orange fill-current">
+                          <svg class="w-10 h-10">
+                            <use href="img/flaticons.svg#icon-website-3"></use>
+                          </svg>
+                        </figure>
+                        <div class="ml-3 text-sm group-hover:opacity-75">
+                          <p>Web Development</p>
+                          <p class="text-shadow-blue font-normal">Realise your brand online</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="mt-4 flex items-center group cursor-pointer">
-                      <figure class="text-shadow-blue group-hover:text-emerald fill-current">
-                        <svg class="w-10 h-10">
-                          <use href="img/flaticons.svg#icon-social-media"></use>
-                        </svg>
-                      </figure>
-                      <div class="ml-3 text-sm group-hover:opacity-75"">
-                      <p>Digital Marketing</p>
-                      <p class=" text-shadow-blue font-normal">Reach new markets</p>
+                      <div class="mt-4 flex items-center group cursor-pointer">
+                        <figure class="text-shadow-blue group-hover:text-emerald fill-current">
+                          <svg class="w-10 h-10">
+                            <use href="img/flaticons.svg#icon-social-media"></use>
+                          </svg>
+                        </figure>
+                        <div class="ml-3 text-sm group-hover:opacity-75"">
+                        <p>Digital Marketing</p>
+                        <p class=" text-shadow-blue font-normal">Reach new markets</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="px-4">
-              <div class="border-t py-4">
-                <h2 class="text-sm uppercase">Bundles</h2>
-                <div class="mt-2">
-                  <div class="flex flex-col">
-                    <h3 class="text-shadow-blue text-xs uppercase">Dual Combo</h3>
-                    <div class="mt-4 flex items-center group cursor-pointer">
-                      <figure class="text-shadow-blue group-hover:text-rich-black-forga fill-current">
-                        <svg class="w-10 h-10">
-                          <use href="img/flaticons.svg#icon-theme"></use>
-                        </svg>
-                      </figure>
-                      <div class="ml-3 text-sm group-hover:opacity-75">
-                        <p>Branding, Design and Web Development</p>
-                        <p class="text-shadow-blue font-normal">Strategy to online presence</p>
+              <div class="px-4">
+                <div class="border-t py-4">
+                  <h2 class="text-sm uppercase">Bundles</h2>
+                  <div class="mt-2">
+                    <div class="flex flex-col">
+                      <h3 class="text-shadow-blue text-xs uppercase">Dual Combo</h3>
+                      <div class="mt-4 flex items-center group cursor-pointer">
+                        <figure class="text-shadow-blue group-hover:text-rich-black-forga fill-current">
+                          <svg class="w-10 h-10">
+                            <use href="img/flaticons.svg#icon-theme"></use>
+                          </svg>
+                        </figure>
+                        <div class="ml-3 text-sm group-hover:opacity-75">
+                          <p>Branding, Design and Web Development</p>
+                          <p class="text-shadow-blue font-normal">Strategy to online presence</p>
+                        </div>
+                      </div>
+                      <div class="mt-4 flex items-center group cursor-pointer">
+                        <figure class="text-shadow-blue group-hover:text-rich-black-forga fill-current">
+                          <svg class="w-10 h-10">
+                            <use href="img/flaticons.svg#icon-analysis"></use>
+                          </svg>
+                        </figure>
+                        <div class="ml-3 text-sm group-hover:opacity-75">
+                          <p>Branding, Design and Digital Marketing</p>
+                          <p class="text-shadow-blue font-normal">Branding strategy and marketing</p>
+                        </div>
                       </div>
                     </div>
-                    <div class="mt-4 flex items-center group cursor-pointer">
-                      <figure class="text-shadow-blue group-hover:text-rich-black-forga fill-current">
-                        <svg class="w-10 h-10">
-                          <use href="img/flaticons.svg#icon-analysis"></use>
-                        </svg>
-                      </figure>
-                      <div class="ml-3 text-sm group-hover:opacity-75">
-                        <p>Branding, Design and Digital Marketing</p>
-                        <p class="text-shadow-blue font-normal">Branding strategy and marketing</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-4 flex flex-col">
-                    <h3 class="text-shadow-blue text-xs uppercase">Mega Combo</h3>
-                    <div class="mt-4 flex items-center group cursor-pointer">
-                      <figure class="text-shadow-blue group-hover:text-rich-black-forga fill-current">
-                        <svg class="w-10 h-10">
-                          <use href="img/flaticons.svg#icon-startup"></use>
-                        </svg>
-                      </figure>
-                      <div class="ml-3 text-sm group-hover:opacity-75">
-                        <p>Branding, Web Development and Digital Marketing</p>
-                        <p class="text-shadow-blue font-normal">All inclusive package</p>
+                    <div class="mt-4 flex flex-col">
+                      <h3 class="text-shadow-blue text-xs uppercase">Mega Combo</h3>
+                      <div class="mt-4 flex items-center group cursor-pointer">
+                        <figure class="text-shadow-blue group-hover:text-rich-black-forga fill-current">
+                          <svg class="w-10 h-10">
+                            <use href="img/flaticons.svg#icon-startup"></use>
+                          </svg>
+                        </figure>
+                        <div class="ml-3 text-sm group-hover:opacity-75">
+                          <p>Branding, Web Development and Digital Marketing</p>
+                          <p class="text-shadow-blue font-normal">All inclusive package</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="px-4">
-              <div class="border-t border-b py-4">
-                <h2 class="text-sm uppercase">Pricing</h2>
+              <div class="px-4">
+                <div class="border-t border-b py-4">
+                  <h2 class="text-sm uppercase">Pricing</h2>
+                </div>
               </div>
-            </div>
-            <div class="px-4">
-              <div class="py-4">
-                <button class="btn w-full text-emerald bg-green-200">Get Started</button>
+              <div class="px-4">
+                <div class="py-4">
+                  <button class="btn w-full text-emerald bg-green-200">Get Started</button>
+                </div>
               </div>
-            </div>
+            </section>
           </section>
-          <div class="hidden">
+          <section class="hidden laptop:block">
             <a href="#" class="px-4 text-base">Services</a>
             <button id="btn-bundles" class="px-4 font-semibold focus:outline-none">
               <div class="flex items-center">
@@ -166,7 +168,10 @@
                 </figure>
               </div>
             </button>
-          </div>
+            <button button class="btn ml-10 py-2 text-emerald bg-green-200 rounded-lg">
+              Get Started
+            </button>
+          </section>
           <!-- <button id="pkg-cancel" class="hidden fixed w-full h-full inset-0"></button> -->
           <section id="dropdown-bundles"
             class="hidden absolute z-20 p-6 mt-16 mr-12 top-0 right-0 bg-white text-left rounded-lg shadow-lg">
@@ -248,277 +253,281 @@
               </div>
             </div>
           </section>
-          <button button class="hidden btn ml-10 py-2 text-emerald bg-green-200 rounded-lg">
-            Get Started
-          </button>
         </nav>
       </div>
     </header>
   </div>
   <main>
     <section class="py-20 bg-white">
-      <div class="container mx-auto">
-        <header class="ml-4 mr-8">
-          <h2 class="text-shadow-blue text-2xl sm:text-3xl font-semibold">Branding & Design</h2>
-          <h1 class="text-4xl sm:text-6xl font-bold">Plans and pricing</h1>
+      <div class="laptop:container mx-auto">
+        <header class="mx-4 laptop:mx-8">
+          <h2 class="text-shadow-blue text-2xl desktop:text-3xl font-semibold">Branding & Design</h2>
+          <h1 class="text-4xl laptop:text-5xl desktop:text-6xl font-bold">Customised Planning</h1>
         </header>
-        <div class="ml-4 mr-8 sm:text-2xl">
+        <div class="mx-4 laptop:mx-8 laptop:text-xl">
           <p>Get an estimate of how much your next branding project will cost</p>
         </div>
       </div>
     </section>
     <section class="py-20 bg-rich-black-forga">
-      <div id="form-container">
-        <form class="p-4 mx-4 bg-white rounded-sm">
-          <header>
-            <h2 class="text-2xl sm:text-3xl font-bold">What’d you need for this project?</h2>
-            <p class="text-shadow-blue">Customise your branding and design package by selecting what you'll need from
-              the list below, and we’ll
-              calculate an accurate estimate cost.</p>
-          </header>
-          <div class="mt-10">
-            <section>
-              <div class="flex items-center">
-                <figure>
-                  <svg class="w-6 h-6 text-tart-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </figure>
-                <h2 class="ml-2 font-semibold text-xl">Design</h2>
-              </div>
-              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 sm:gap-y-8">
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="logo" id="design-logo" class="hidden cursor-pointer checkbox-input">
-                  <label for="design-logo"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Logo</label>
+      <div class="laptop:container mx-auto">
+        <div id="form-container">
+          <form class="p-4 mx-4 laptop:mx-8 bg-white rounded-sm">
+            <header>
+              <h2 class="text-2xl laptop:text-3xl font-bold">What’d you need for this project?</h2>
+              <p class="text-shadow-blue">Customise your branding and design package by selecting what you'll need from
+                the list below, and we’ll
+                calculate an accurate estimate cost.</p>
+            </header>
+            <div class="mt-10">
+              <section>
+                <div class="flex items-center">
+                  <figure>
+                    <svg class="w-6 h-6 text-tart-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </figure>
+                  <h2 class="ml-2 font-semibold text-xl">Design</h2>
                 </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="businessCards" id="design-cards"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="design-cards"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Business
-                    Cards</label>
+                <div
+                  class="mt-4 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 tablet:gap-y-8">
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="logo" id="design-logo" class="hidden cursor-pointer checkbox-input">
+                    <label for="design-logo"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Logo</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="businessCards" id="design-cards"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="design-cards"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Business
+                      Cards</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="poster" id="design-poster"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="design-poster"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Poster/Flyer</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="brochure" id="design-brochure"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="design-brochure"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Brochure</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="illustration" id="design-illustration"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="design-illustration"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Illustration</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="marketingAds" id="design-ads"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="design-ads"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Marketing
+                      Ads</label>
+                  </div>
                 </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="poster" id="design-poster" class="hidden cursor-pointer checkbox-input">
-                  <label for="design-poster"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Poster/Flyer</label>
+              </section>
+              <section class="mt-10">
+                <div class="flex items-center">
+                  <figure>
+                    <svg class="w-6 h-6 text-emerald" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </figure>
+                  <h2 class="ml-2 font-semibold text-xl">Branding</h2>
                 </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="brochure" id="design-brochure"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="design-brochure"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Brochure</label>
+                <div
+                  class="mt-4 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 tablet:gap-y-8">
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="vehicleBranding" id="branding-vehicle"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-vehicle"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Vehicle
+                      Branding</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="teardropBanner" id="branding-teardrop"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-teardrop"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Teardrop
+                      Banner</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="rollupBanner" id="branding-rollup"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-rollup"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Rollup
+                      Banner</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="gazebo" id="branding-gazebo"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-gazebo"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Gazebo</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="billboard" id="branding-billboard"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-billboard"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Billboard</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="packaging" id="branding-packaging"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-packaging"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Packaging</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="merch" id="branding-merch"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="branding-merch"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Merch/Swag</label>
+                  </div>
                 </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="illustration" id="design-illustration"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="design-illustration"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Illustration</label>
+              </section>
+              <section class="mt-10">
+                <div class="flex items-center">
+                  <figure>
+                    <svg class="w-6 h-6 text-mikado-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                      fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+                        clip-rule="evenodd" />
+                      <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
+                    </svg>
+                  </figure>
+                  <h2 class="ml-2 font-semibold text-xl">Stationery</h2>
                 </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="marketingAds" id="design-ads"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="design-ads"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Marketing
-                    Ads</label>
+                <div
+                  class="mt-4 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 tablet:gap-y-8">
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="letterhead" id="stationery-letterhead"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="stationery-letterhead"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Letterhead</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="companyProfile" id="stationery-profile"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="stationery-profile"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Company
+                      Profile</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="invoice" id="stationery-invoice"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="stationery-invoice"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Invoice</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="receiptBook" id="stationery-receipt-book"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="stationery-receipt-book"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Receipt
+                      Book</label>
+                  </div>
+                  <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
+                    <input type="checkbox" name="calendar" id="stationery-calendar"
+                      class="hidden cursor-pointer checkbox-input">
+                    <label for="stationery-calendar"
+                      class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Calendar</label>
+                  </div>
                 </div>
-              </div>
-            </section>
-            <section class="mt-10">
-              <div class="flex items-center">
-                <figure>
-                  <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                      clip-rule="evenodd" />
-                  </svg>
-                </figure>
-                <h2 class="ml-2 font-semibold text-xl">Branding</h2>
-              </div>
-              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 sm:gap-y-8">
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="vehicleBranding" id="branding-vehicle"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-vehicle"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Vehicle
-                    Branding</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="teardropBanner" id="branding-teardrop"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-teardrop"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Teardrop
-                    Banner</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="rollupBanner" id="branding-rollup"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-rollup"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Rollup
-                    Banner</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="gazebo" id="branding-gazebo"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-gazebo"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Gazebo</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="billboard" id="branding-billboard"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-billboard"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Billboard</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="packaging" id="branding-packaging"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-packaging"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Packaging</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="merch" id="branding-merch" class="hidden cursor-pointer checkbox-input">
-                  <label for="branding-merch"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Merch/Swag</label>
-                </div>
-              </div>
-            </section>
-            <section class="mt-10">
-              <div class="flex items-center">
-                <figure>
-                  <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
-                      clip-rule="evenodd" />
-                    <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
-                  </svg>
-                </figure>
-                <h2 class="ml-2 font-semibold text-xl">Stationery</h2>
-              </div>
-              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 sm:gap-y-8">
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="letterhead" id="stationery-letterhead"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="stationery-letterhead"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Letterhead</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="companyProfile" id="stationery-profile"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="stationery-profile"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Company
-                    Profile</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="invoice" id="stationery-invoice"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="stationery-invoice"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Invoice</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="receiptBook" id="stationery-receipt-book"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="stationery-receipt-book"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Receipt
-                    Book</label>
-                </div>
-                <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
-                  <input type="checkbox" name="calendar" id="stationery-calendar"
-                    class="hidden cursor-pointer checkbox-input">
-                  <label for="stationery-calendar"
-                    class="w-full py-3 pb-3 pl-10 inline-block relative text-base box-border cursor-pointer">Calendar</label>
-                </div>
-              </div>
-            </section>
-          </div>
-          <footer class="mt-12">
-            <div class="flex justify-between">
-              <button class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button>
-              <button type="reset" class="btn py-2 bg-red-200 text-tart-orange">Reset</button>
+              </section>
             </div>
-          </footer>
-        </form>
-      </div>
-      <div id="estimate" class="hidden container mx-auto">
-        <section class="mx-4 p-4 sm:p-8 bg-white rounded-sm">
-          <header class="text-center">
-            <h4 class="font-bold text-2xl sm:text-3xl">Estimated Branding and Design Cost: $<span
-                id="total">17,999.99</span></h4>
-            <div class="mt-4 inline-flex items-center">
-              <figure class="p-2 rounded-full bg-green-200 text-emerald">
-                <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                </svg>
-              </figure>
-              <span class="ml-2">Print incl.</span>
-            </div>
-          </header>
-          <div class="mt-8">
-            <div class="mt-4">
-              <div class="flex flex-col">
-                <div class="-my-2 px-px py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-                  <div
-                    class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-md border-b border-gray-200">
-                    <table class="min-w-full">
-                      <thead>
-                        <tr class="bg-gray-100">
-                          <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                            <h2 class="text-left text-sm font-semibold uppercase tracking-wider">Description</h2>
-                          </th>
-                          <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                            <h2 class="text-right text-sm font-semibold uppercase tracking-wider">Cost</h2>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody id="breakdown-container"></tbody>
-                      <tfoot id="breakdown-total"></tfoot>
-                    </table>
+            <footer class="mt-12">
+              <div class="flex justify-between">
+                <button class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button>
+                <button type="reset" class="btn py-2 bg-red-200 text-tart-orange">Reset</button>
+              </div>
+            </footer>
+          </form>
+        </div>
+        <div id="estimate" class="hidden laptop:container mx-auto">
+          <section class="mx-4 laptop:mx-8 p-4 laptop:p-8 bg-white rounded-sm">
+            <header class="text-center">
+              <h4 class="font-bold text-2xl laptop:text-3xl">Estimated Branding and Design Cost: $<span
+                  id="total">17,999.99</span></h4>
+              <div class="mt-4 inline-flex items-center">
+                <figure class="p-2 rounded-full bg-green-200 text-emerald">
+                  <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                  </svg>
+                </figure>
+                <span class="ml-2">Print incl.</span>
+              </div>
+            </header>
+            <div class="mt-8">
+              <div class="mt-4">
+                <div class="flex flex-col">
+                  <div class="-my-2 px-px py-2 overflow-x-auto laptop:-mx-6 laptop:px-6 lg:-mx-8 lg:px-8">
+                    <div
+                      class="align-middle inline-block min-w-full shadow overflow-hidden laptop:rounded-md border-b border-gray-200">
+                      <table class="min-w-full">
+                        <thead>
+                          <tr class="bg-gray-100">
+                            <th class="px-4 laptop:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                              <h2 class="text-left text-sm font-semibold uppercase tracking-wider">Description</h2>
+                            </th>
+                            <th class="px-4 laptop:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                              <h2 class="text-right text-sm font-semibold uppercase tracking-wider">Cost</h2>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody id="breakdown-container"></tbody>
+                        <tfoot id="breakdown-total"></tfoot>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <footer class="mt-8">
-            <div class="flex justify-between">
-              <button id="edit-package" class="btn inline-flex items-center bg-green-200 text-emerald">
-                <figure>
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                  </svg>
-                </figure>
-                <span class="ml-2">Edit</span>
-              </button>
-              <button class="btn text-emerald bg-rich-black-forga uppercase tracking-wide">
-                Request Project
-              </button>
-            </div>
-          </footer>
-        </section>
+            <footer class="mt-8">
+              <div class="flex justify-between">
+                <button id="edit-package" class="btn py-2 inline-flex items-center bg-green-200 text-emerald">
+                  <figure>
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                    </svg>
+                  </figure>
+                  <span class="ml-2">Edit</span>
+                </button>
+                <button class="btn py-2 text-emerald bg-rich-black-forga text-sm uppercase tracking-wide">
+                  Request Project
+                </button>
+              </div>
+            </footer>
+          </section>
+        </div>
       </div>
     </section>
     <section class="py-20">
-      <div class="container mx-auto">
-        <div class="mx-4 p-8 bg-white shadow-xl rounded-md sm:flex items-center justify-between">
+      <div class="laptop:container mx-auto">
+        <div class="mx-4 laptop:mx-8 p-8 bg-white shadow-xl rounded-md laptop:flex items-center justify-between">
           <div>
             <header class="font-bold">
               <h1 class="text-tart-orange">Available in bundles</h1>
-              <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Branding and design bundle combos</h2>
+              <h2 class="mt-4 text-2xl laptop::text-3xl font-bold">Branding and design bundle combos</h2>
             </header>
             <div class="mt-4">
               <p class="text-shadow-blue whitespace-normal">Specially customised service bundles at
                 discounted prices. Make sure to check out the dual and mega bundle combos!</p>
             </div>
           </div>
-          <footer class="mt-6 sm:mt-0 sm:ml-20 sm:flex-shrink-0">
-            <a href="#" class="btn sm:py-4 inline-flex items-center bg-mat-blue-gray-100">
+          <footer class="mt-6 laptop:mt-0 laptop:ml-20 laptop:flex-shrink-0">
+            <a href="#" class="btn laptop:py-4 inline-flex items-center bg-mat-blue-gray-100">
               <span class="font-semibold uppercase tracking-wider">Explore packages</span>
               <figure>
                 <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -533,28 +542,28 @@
       </div>
     </section>
     <section class="py-20">
-      <div class="container mx-auto">
-        <header class="ml-4 mr-8 text-center">
+      <div class="laptop:container mx-auto">
+        <header class="mx-4 laptop:mx-8 text-center">
           <h3>Local brands trust us on this</h3>
         </header>
-        <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 grid-flow-row gap-8">
+        <div class="mt-16 mx-4 laptop:mx-8 grid grid-cols-2 tablet:grid-cols-4 grid-flow-row gap-8">
           <figure class="text-gray-500">
-            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
+            <svg class="w-32 laptop:w-48 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#kenvim"></use>
             </svg>
           </figure>
           <figure class="text-gray-500">
-            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
+            <svg class="w-32 laptop:w-48 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#quality-pro"></use>
             </svg>
           </figure>
           <figure class="text-gray-500">
-            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
+            <svg class="w-32 laptop:w-48 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#transcare"></use>
             </svg>
           </figure>
           <figure class="text-gray-500">
-            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
+            <svg class="w-32 laptop:w-48 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#royal-intersec"></use>
             </svg>
           </figure>
@@ -563,26 +572,29 @@
     </section>
   </main>
   <footer class="py-20">
-    <section class="">
-      <div class="container mx-auto sm:flex">
-        <section class="mx-4 sm:mr-16">
-          <header>
-            <h2 class="font-bold sm:font-semibold text-2xl sm:text-3xl">
-              Ready to start a project?
-            </h2>
-          </header>
-          <section>
-            <p class="mt-2">
-              You know you can bet your money on us. Start using our services
-              today and get that brand or site up and running in no time
-            </p>
-            <button class="btn mt-8 bg-rich-black-forga text-emerald">
-              Get Started Now!
-            </button>
-          </section>
+    <section>
+      <div class="laptop:container mx-auto grid grid-cols-1 laptop:grid-cols-2 laptop:grid-flow-row gap-x-4">
+        <section class="mx-4 laptop:ml-8">
+          <div>
+            <header>
+              <h2 class="font-bold laptop:font-semibold text-2xl laptop:text-3xl">
+                Ready to start a project?
+              </h2>
+            </header>
+            <div>
+              <p class="mt-2">
+                You know you can bet your money on us. Start using our services
+                today and get that brand or site up and running in no time
+              </p>
+              <button class="btn mt-8 bg-rich-black-forga text-emerald">
+                Get Started Now!
+              </button>
+            </div>
+          </div>
         </section>
-        <section class="mt-16 mx-4 sm:flex">
-          <div class="grid grid-cols-1 sm:grid-rows-1 grid-flow-row sm:grid-flow-col gap-y-12 gap-x-4">
+        <section class="mt-16 laptop:mt-0 mx-4 laptop:flex">
+          <div
+            class="grid grid-cols-1 tablet:grid-cols-2 tablet:grid-flow-row laptop:grid-rows-1 grid-flow-row laptop:grid-flow-col gap-y-12 gap-x-4">
             <div class="text-base">
               <header>
                 <figure>
@@ -596,8 +608,7 @@
                 <p class="text-shadow-blue">Pay for exactly what you see and we'll deliver great value for it!</p>
               </div>
               <footer>
-                <button button onclick="loadRFQForm()"
-                  class="mt-4 text-sm flex items-end text-emerald focus:outline-none"">
+                <a href="#" class="mt-4 text-sm flex items-end text-emerald focus:outline-none"">
                   <span class=" font-semibold">Transparent pricing</span>
                   <span>
                     <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -606,7 +617,7 @@
                         clip-rule="evenodd"></path>
                     </svg>
                   </span>
-                </button>
+                </a>
               </footer>
             </div>
             <div class="text-base">
@@ -622,8 +633,7 @@
                 <p class="text-shadow-blue">Carefully crafted bundles to give you more, for less</p>
               </div>
               <footer>
-                <button button onclick="loadRFQForm()"
-                  class="mt-4 text-sm flex items-end text-tart-orange focus:outline-none"">
+                <a href="#" class="mt-4 text-sm flex items-end text-tart-orange focus:outline-none"">
                   <span class=" font-semibold">Package details</span>
                   <span>
                     <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -632,16 +642,17 @@
                         clip-rule="evenodd"></path>
                     </svg>
                   </span>
-                </button>
+                </a>
               </footer>
             </div>
           </div>
         </section>
       </div>
     </section>
-    <section class="mt-20">
-      <div class="container mx-auto grid grid-cols-1 sm:grid-rows-1 grid-flow-row sm:grid-flow-col text-base">
-        <div class="ml-4 mr-8 flex flex-col justify-between">
+    <section class="mt-20 laptop:mt-40">
+      <div
+        class="laptop:container mx-auto grid grid-cols-1 grid-flow-row tablet:grid-cols-2 laptop:grid-cols-4 gap-x-4 text-base">
+        <div class="mx-4 laptop:ml-8 flex flex-col justify-between">
           <div>
             <a href="#">
               <h1>
@@ -675,7 +686,7 @@
           </div>
           <span class="hidden">&copy;2018-2020</span>
         </div>
-        <div class="mt-10 mx-4 sm:mr-8">
+        <div class="mt-10 laptop:mt-0 mx-4">
           <h6 class="font-bold uppercase tracking-wider">See also</h6>
           <ul class="mt-2">
             <li class="mt-1">
@@ -686,7 +697,7 @@
             </li>
           </ul>
         </div>
-        <div class="mt-10 mx-4 sm:mr-8">
+        <div class="mt-10 laptop:mt-0 mx-4">
           <h6 class="font-bold uppercase tracking-wider">Reach out</h6>
           <ul class="mt-2">
             <li class="mt-1">
@@ -697,7 +708,7 @@
             </li>
           </ul>
         </div>
-        <div class="mt-10 mx-4 sm:mr-8">
+        <div class="mt-10 laptop:mt-0 mx-4">
           <h6 class="font-bold uppercase tracking-wider">On the web</h6>
           <ul class="mt-2">
             <li class="mt-1">
@@ -716,20 +727,6 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="ml-16 p-4 flex-auto">
-          <div>
-            <h6 class="text-xl font-bold">Subscribe to newsletter</h6>
-            <p class="w-3/4 mt-2">Subscribe to our weekly newsletter and stay in the loop on new services and products
-              and
-              promotions!
-            </p>
-          </div>
-          <form action="" class="mt-4 flex justify-between border-2 rounded-lg">
-            <input type="email" placeholder="Enter email" class="pl-2 focus:outline-none rounded-lg">
-            <button
-              class="py-3 px-5 bg-rich-black-forga uppercase text-white font-semibold border-2 border-rich-black-forga rounded-lg focus:outline-none">Subscribe</button>
-          </form>
-        </div> -->
       </div>
     </section>
   </footer>
@@ -814,8 +811,8 @@
           breakdownContainer.insertAdjacentHTML('beforeend',
             `
             <tr>
-              <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-no-wrap border-b border-gray-200 bg-white">${item[0]}</td>
-              <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-no-wrap border-b border-gray-200 bg-white text-right font-semibold">$${currencyFormat(item[1])}</td>
+              <td class="px-4 laptop:px-6 py-3 laptop:py-4 whitespace-no-wrap border-b border-gray-200 bg-white">${item[0]}</td>
+              <td class="px-4 laptop:px-6 py-3 laptop:py-4 whitespace-no-wrap border-b border-gray-200 bg-white text-right font-semibold">$${currencyFormat(item[1])}</td>
             </tr>
             `
           )
@@ -830,10 +827,10 @@
         breakdownContainer.insertAdjacentHTML('beforeend',
           `
             <tr class="bg-gray-100">
-              <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+              <th class="px-4 laptop:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                 <h2 class="text-left text-sm font-bold uppercase tracking-wider">Total</h2>
               </th>
-              <th class="px-4 sm:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">$${sum}</th>
+              <th class="px-4 laptop:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">$${sum}</th>
             </tr>
           `
         )
