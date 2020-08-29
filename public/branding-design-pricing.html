@@ -14,15 +14,21 @@
   </style> -->
 </head>
 
-<body class="font-inter font-medium text-rich-black-forga text-lg">
-  <header class="relative py-4 px-12 bg-white">
+<body class="font-inter font-medium text-rich-black-forga sm:text-lg">
+  <header class="relative py-4 px-4 sm:px-12 bg-white">
     <div class="flex items-center justify-between">
-      <div class="flex">
-        <a href="http://irusedge.com">
-          <img src="./img/logo.png" alt="Irus Edge Logo" class="h-6 lg:h-8" />
+      <section class="flex">
+        <a href="#">
+          <h1>
+            <figure>
+              <svg class="w-32 h-auto fill-current text-rich-black-forga" viewBox="0 0 697.58 183.84">
+                <use href="./img/logos.svg#irus-edge"></use>
+              </svg>
+            </figure>
+          </h1>
         </a>
-      </div>
-      <nav class="flex items-center font-semibold">
+      </section>
+      <nav class="hidden sm:flex items-center font-semibold">
         <a href="#" class="px-4 text-base">Services</a>
         <button id="btn-bundles" class="px-4 font-semibold focus:outline-none">
           <div class="flex items-center">
@@ -137,19 +143,19 @@
     <section class="py-20 bg-white">
       <div class="container mx-auto">
         <header class="ml-4 mr-8">
-          <h2 class="text-shadow-blue text-3xl font-semibold">Branding & Design</h2>
-          <h1 class="text-6xl font-bold">Plans and pricing</h1>
+          <h2 class="text-shadow-blue text-2xl sm:text-3xl font-semibold">Branding & Design</h2>
+          <h1 class="text-4xl sm:text-6xl font-bold">Plans and pricing</h1>
         </header>
-        <div class="ml-4 mr-8 text-2xl">
+        <div class="ml-4 mr-8 sm:text-2xl">
           <p>Get an estimate of how much your next branding project will cost</p>
         </div>
       </div>
     </section>
     <section class="py-20 bg-rich-black-forga">
-      <div class="container mx-auto px-4">
-        <form id="package-form" class="p-8 bg-white rounded-sm">
+      <div class="">
+        <form id="package-form" class="p-4 mx-4 bg-white rounded-sm">
           <header>
-            <h2 class="text-3xl font-bold">What’d you need for this project?</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold">What’d you need for this project?</h2>
             <p class="text-shadow-blue">Customise your branding and design package by selecting what you'll need from
               the list below, and we’ll
               calculate an accurate estimate cost.</p>
@@ -167,7 +173,7 @@
                 </figure>
                 <h2 class="ml-2 font-semibold text-xl">Design</h2>
               </div>
-              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-x-6 gap-y-8">
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 sm:gap-y-8">
                 <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
                   <input type="checkbox" name="logo" id="design-logo" class="hidden cursor-pointer checkbox-input">
                   <label for="design-logo"
@@ -218,7 +224,7 @@
                 </figure>
                 <h2 class="ml-2 font-semibold text-xl">Branding</h2>
               </div>
-              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-x-6 gap-y-8">
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 sm:gap-y-8">
                 <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
                   <input type="checkbox" name="vehicleBranding" id="branding-vehicle"
                     class="hidden cursor-pointer checkbox-input">
@@ -278,7 +284,7 @@
                 </figure>
                 <h2 class="ml-2 font-semibold text-xl">Stationery</h2>
               </div>
-              <div class="mt-4 grid grid-cols-3 grid-flow-row gap-x-6 gap-y-8">
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 grid-flow-row gap-x-6 gap-y-4 sm:gap-y-8">
                 <div class="checkbox border rounded-md cursor-pointer transition-all ease-in-out duration-150">
                   <input type="checkbox" name="letterhead" id="stationery-letterhead"
                     class="hidden cursor-pointer checkbox-input">
@@ -384,18 +390,18 @@
     </section>
     <section class="py-20">
       <div class="container mx-auto">
-        <div class="mx-4 p-8 bg-white shadow-xl rounded-md flex items-center justify-between">
+        <div class="mx-4 p-8 bg-white shadow-xl rounded-md sm:flex items-center justify-between">
           <div>
             <header class="font-bold">
               <h1 class="text-tart-orange">Available in bundles</h1>
-              <h2 class="mt-4 text-3xl font-bold">Branding and design bundle combos</h2>
+              <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Branding and design bundle combos</h2>
             </header>
             <div class="mt-4">
               <p class="text-shadow-blue whitespace-normal">Specially customised service bundles at
                 discounted prices. Make sure to check out the dual and mega bundle combos!</p>
             </div>
           </div>
-          <footer class="ml-20 flex-shrink-0">
+          <footer class="mt-6 sm:mt-0 sm:ml-20 sm:flex-shrink-0">
             <a href="#" class="btn py-4 inline-flex items-center bg-mat-blue-gray-100">
               <span class="font-semibold uppercase tracking-wider">Explore packages</span>
               <figure>
@@ -415,24 +421,24 @@
         <header class="ml-4 mr-8 text-center">
           <h3>Local brands trust us on this</h3>
         </header>
-        <div class="mt-16 grid grid-cols-4 grid-flow-row gap-8">
+        <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 grid-flow-row gap-8">
           <figure class="text-gray-500">
-            <svg class="stroke-current fill-current">
+            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#kenvim"></use>
             </svg>
           </figure>
           <figure class="text-gray-500">
-            <svg class="stroke-current fill-current">
+            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#quality-pro"></use>
             </svg>
           </figure>
           <figure class="text-gray-500">
-            <svg class="stroke-current fill-current">
+            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#transcare"></use>
             </svg>
           </figure>
           <figure class="text-gray-500">
-            <svg class="stroke-current fill-current">
+            <svg class="w-32 h-auto mx-auto stroke-current fill-current" viewBox="0 0 1080 720">
               <use href="img/logos.svg#royal-intersec"></use>
             </svg>
           </figure>
@@ -440,12 +446,12 @@
       </div>
     </section>
   </main>
-  <footer class="py-40 px-4">
-    <section class="px-4">
-      <div class="container mx-auto flex">
-        <section class="w-1/2 ml-4 mr-16">
+  <footer class="py-20">
+    <section class="">
+      <div class="container mx-auto sm:flex">
+        <section class="mx-4 sm:mr-16">
           <header>
-            <h2 class="font-semibold text-3xl">
+            <h2 class="font-bold sm:font-semibold text-2xl sm:text-3xl">
               Ready to start a project?
             </h2>
           </header>
@@ -454,13 +460,13 @@
               You know you can bet your money on us. Start using our services
               today and get that brand or site up and running in no time
             </p>
-            <button onclick="loadRFQForm()" class="btn mt-8 bg-rich-black-forga text-emerald">
+            <button class="btn mt-8 bg-rich-black-forga text-emerald">
               Get Started Now!
             </button>
           </section>
         </section>
-        <section class="w-1/2 flex">
-          <div class="grid grid-rows-1 grid-flow-col gap-x-4">
+        <section class="mt-16 mx-4 sm:flex">
+          <div class="grid grid-cols-1 sm:grid-rows-1 grid-flow-row sm:grid-flow-col gap-y-12 gap-x-4">
             <div class="text-base">
               <header>
                 <figure>
@@ -517,11 +523,19 @@
         </section>
       </div>
     </section>
-    <section class="mt-40">
-      <div class="container mx-auto grid grid-rows-1 grid-flow-col text-base">
+    <section class="mt-20">
+      <div class="container mx-auto grid grid-cols-1 sm:grid-rows-1 grid-flow-row sm:grid-flow-col text-base">
         <div class="ml-4 mr-8 flex flex-col justify-between">
           <div>
-            <img src="img/logo.png" alt="Logo" srcset="" class="h-6 w-auto">
+            <a href="#">
+              <h1>
+                <figure>
+                  <svg class="w-24 h-auto fill-current text-rich-black-forga" viewBox="0 0 697.58 183.84">
+                    <use href="./img/logos.svg#irus-edge"></use>
+                  </svg>
+                </figure>
+              </h1>
+            </a>
             <p class="mt-2 flex items-center font-medium">
               <span>
                 <svg viewBox="0 0 20 20" fill="currentColor" class="location-marker w-5 h-5">
@@ -543,10 +557,10 @@
               <span class="ml-1">English (United Kingdom)</span>
             </p>
           </div>
-          <span>&copy;2018-2020</span>
+          <span class="hidden">&copy;2018-2020</span>
         </div>
-        <div class="ml-4 mr-8">
-          <h6 class="font-bold">See also</h6>
+        <div class="mt-10 mx-4 sm:mr-8">
+          <h6 class="font-bold uppercase tracking-wider">See also</h6>
           <ul class="mt-2">
             <li class="mt-1">
               <a href="#" class="hover:text-shadow-blue">Services</a>
@@ -556,8 +570,8 @@
             </li>
           </ul>
         </div>
-        <div class="ml-4 mr-8">
-          <h6 class="font-bold">Reach out</h6>
+        <div class="mt-10 mx-4 sm:mr-8">
+          <h6 class="font-bold uppercase tracking-wider">Reach out</h6>
           <ul class="mt-2">
             <li class="mt-1">
               <a href="mailto:enquiries@irusedge.com" class="hover:text-shadow-blue">enquiries@irusedge.com</a>
@@ -567,8 +581,8 @@
             </li>
           </ul>
         </div>
-        <div class="ml-4 mr-8">
-          <h6 class="font-bold">On the web</h6>
+        <div class="mt-10 mx-4 sm:mr-8">
+          <h6 class="font-bold uppercase tracking-wider">On the web</h6>
           <ul class="mt-2">
             <li class="mt-1">
               <a href="https://www.facebook.com/irusedge.da/" target="_blank"
