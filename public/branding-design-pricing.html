@@ -16,7 +16,7 @@
 
 <body class="font-inter font-medium text-rich-black-forga sm:text-lg">
   <header class="relative py-4 px-4 sm:px-12 bg-white">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between relative">
       <section class="flex">
         <a href="#">
           <h1>
@@ -29,7 +29,7 @@
         </a>
       </section>
       <nav class="font-semibold">
-        <div>
+        <div class="relative">
           <button id="toggle-menu" class="text-rich-black-forga focus:outline-none">
             <figure>
               <svg id="toggle-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -40,7 +40,8 @@
           </button>
         </div>
         <section id="dropdown-menu"
-          class="hidden absolute z-30 bg-white shadow-lg w-full mt-3 right-0 transition-all duration-200">
+          class="hidden fixed bg-white shadow-lg pt-16 w-full min-h-screen overflow-scroll top-0 right-0 transition-all duration-200"
+          style="z-index: -1;">
           <div class="px-4">
             <div class="py-4">
               <h2 class="text-sm uppercase">Services</h2>
@@ -252,7 +253,7 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main class="relative" style="z-index: -2;">
     <section class="py-20 bg-white">
       <div class="container mx-auto">
         <header class="ml-4 mr-8">
