@@ -696,8 +696,8 @@
     </section>
     <section class="mt-20 laptop:mt-40">
       <div
-        class="laptop:container mx-auto grid grid-cols-1 grid-flow-row tablet:grid-cols-2 laptop:grid-cols-4 gap-x-4 text-base">
-        <div class="mx-4 laptop:ml-8 flex flex-col justify-between">
+        class="laptop:container mx-auto grid grid-cols-1 grid-flow-row tablet:grid-cols-2 laptop:grid-cols-none laptop:flex gap-x-4 text-base">
+        <div class="mx-4 laptop:ml-8 laptop:w-1/4 laptop:flex flex-col justify-between">
           <div>
             <a href="#">
               <h1>
@@ -708,69 +708,73 @@
                 </figure>
               </h1>
             </a>
-            <p class="mt-2 flex items-center font-medium">
-              <span>
-                <svg viewBox="0 0 20 20" fill="currentColor" class="location-marker w-5 h-5">
-                  <path fill-rule="evenodd"
-                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </span>
-              <span class="ml-1">Harare, Zimbabwe</span>
-            </p>
-            <p class="mt-2 flex items-center font-medium">
-              <span>
-                <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd"
-                    d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </span>
-              <span class="ml-1">English (United Kingdom)</span>
-            </p>
+            <ul class="mt-4">
+              <li class="mt-3 flex items-center font-medium">
+                <span>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="location-marker w-5 h-5">
+                    <path fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span class="ml-1">Harare, Zimbabwe</span>
+              </li>
+              <li class="mt-3 flex items-center font-medium">
+                <span>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                    <path fill-rule="evenodd"
+                      d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span class="ml-1">English (United Kingdom)</span>
+              </li>
+            </ul>
           </div>
-          <span class="hidden">&copy;2018-2020</span>
+          <span class="mt-6 block text-sm">&copy;2018-2020</span>
         </div>
-        <div class="mt-10 laptop:mt-0 mx-4">
-          <h6 class="font-bold uppercase tracking-wider">See also</h6>
-          <ul class="mt-2">
-            <li class="mt-1">
-              <a href="#" class="hover:text-shadow-blue">Services</a>
-            </li>
-            <li class="mt-1">
-              <a href="#" class="hover:text-shadow-blue">Packages</a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-10 laptop:mt-0 mx-4">
-          <h6 class="font-bold uppercase tracking-wider">Reach out</h6>
-          <ul class="mt-2">
-            <li class="mt-1">
-              <a href="mailto:enquiries@irusedge.com" class="hover:text-shadow-blue">enquiries@irusedge.com</a>
-            </li>
-            <li class="mt-1">
-              <a href="tel:+263 77 251 6041" class="hover:text-shadow-blue">+263 77 251 6041</a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-10 laptop:mt-0 mx-4 laptop:mr-8">
-          <h6 class="font-bold uppercase tracking-wider">On the web</h6>
-          <ul class="mt-2">
-            <li class="mt-1">
-              <a href="https://www.facebook.com/irusedge.da/" target="_blank"
-                class="hover:text-shadow-blue">Facebook</a>
-            </li>
-            <li class="mt-1">
-              <a href="https://www.instagram.com/irusedgeda/" target="_blank"
-                class="hover:text-shadow-blue">Instagram</a>
-            </li>
-            <li class="mt-1">
-              <a href="https://twitter.com/irusedgea/" target="_blank" class="hover:text-shadow-blue">Twitter</a>
-            </li>
-            <li class="mt-1">
-              <a href="https://wa.me/263772516041" target="_blank" class="hover:text-shadow-blue">WhatsApp</a>
-            </li>
-          </ul>
+        <div class="mt-10 tablet:mt-0 grid grid-cols-2 laptop:grid-cols-3 grid-flow-row gap-y-10 laptop:flex-grow">
+          <div class="mx-4 tablet:mx-0">
+            <h6 class="font-bold uppercase tracking-wider">See also</h6>
+            <ul class="mt-4">
+              <li class="mt-3">
+                <a href="#" class="hover:text-shadow-blue">Services</a>
+              </li>
+              <li class="mt-3">
+                <a href="#" class="hover:text-shadow-blue">Packages</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mx-4 tablet:mx-0">
+            <h6 class="font-bold uppercase tracking-wider">Reach out</h6>
+            <ul class="mt-4">
+              <li class="mt-3">
+                <a href="mailto:enquiries@irusedge.com" class="hover:text-shadow-blue">enquiries@irusedge.com</a>
+              </li>
+              <li class="mt-3">
+                <a href="tel:+263 77 251 6041" class="hover:text-shadow-blue">+263 77 251 6041</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mx-4 tablet:mx-0 laptop:mr-8">
+            <h6 class="font-bold uppercase tracking-wider">On the web</h6>
+            <ul class="mt-4">
+              <li class="mt-3">
+                <a href="https://www.facebook.com/irusedge.da/" target="_blank"
+                  class="hover:text-shadow-blue">Facebook</a>
+              </li>
+              <li class="mt-3">
+                <a href="https://www.instagram.com/irusedgeda/" target="_blank"
+                  class="hover:text-shadow-blue">Instagram</a>
+              </li>
+              <li class="mt-3">
+                <a href="https://twitter.com/irusedgea/" target="_blank" class="hover:text-shadow-blue">Twitter</a>
+              </li>
+              <li class="mt-3">
+                <a href="https://wa.me/263772516041" target="_blank" class="hover:text-shadow-blue">WhatsApp</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
