@@ -13,7 +13,7 @@
 </head>
 
 <body class="font-inter font-medium text-rich-black-forga laptop:text-lg">
-  <div id="header-container" class="relative w-full z-10">
+  <div id="header-container" class="w-full z-10">
     <header class="relative py-4 px-4 laptop:px-8 bg-white">
       <div class="flex items-center justify-between">
         <section class="flex pb-4 laptop:pb-0">
@@ -595,7 +595,8 @@
       <button id="overlay-cancel" tabindex="-1"
         class="hidden fixed inset-0 h-full w-full cursor-default focus:outline-none z-10 cancel"></button>
       <div id="request-container"
-        class="hidden p-4 h-screen fixed top-0 bg-rich-black-forga bg-opacity-50 z-20 overflow-y-auto">
+        class="hidden p-4 h-screen fixed top-0 bg-rich-black-forga bg-opacity-50 z-20 overflow-y-auto"
+        style="padding-bottom: 10vh;">
         <form class="bg-white shadow-xl rounded-md">
           <div class="relative flex">
             <span id="cancel-request"
