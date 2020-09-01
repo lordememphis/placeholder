@@ -12,13 +12,13 @@ const loadRFQForm = () => {
   document.querySelector(".rfq-form").classList.remove("hidden");
 };
 
-[
-  ["#btn-bundles", "#dropdown-bundles"],
-  ["#btn-pricing", "#dropdown-pricing"],
-].forEach((group) => {
-  document.querySelector(group[0]).addEventListener("click", () => {
-    const dropdown = document.querySelector(group[1]);
-    dropdown.classList.toggle("hidden");
-    dropdown.classList.toggle("flex");
-  });
-});
+// [
+//   ["#btn-bundles", "#dropdown-bundles"],
+//   ["#btn-pricing", "#dropdown-pricing"],
+// ].forEach((group) => {
+//   document.querySelector(group[0]).addEventListener("click", () => {
+//     const dropdown = document.querySelector(group[1]);
+//     dropdown.classList.toggle("hidden");
+//     dropdown.classList.toggle("flex");
+//   });
+// });
