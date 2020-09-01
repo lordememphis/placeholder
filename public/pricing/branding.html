@@ -982,6 +982,7 @@
     form.addEventListener('reset', e => {
       Array.from(document.querySelectorAll('.checkbox')).forEach(container => { container.classList.remove('checked') })
       estimateContainer.classList.add('hidden')
+      window.scroll({ top: 350, left: 0, behavior: "smooth" })
     })
 
     document.querySelector('#edit-package').addEventListener('click', e => {
