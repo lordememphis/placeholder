@@ -528,7 +528,7 @@
         <div id="estimate" class="hidden lg:container mx-auto">
           <section class="mx-4 lg:mx-8 p-4 sm:p-8 bg-white rounded-sm">
             <header class="text-center">
-              <h4 class="font-bold text-2xl lg:text-3xl">Estimated Branding and Design Cost: $<span
+              <h4 class="font-bold text-2xl lg:text-3xl">Estimated Branding and Design Cost: <span
                   id="total">17,999.99</span></h4>
               <div class="mt-4 inline-flex items-center">
                 <figure class="p-2 rounded-full bg-green-200 text-emerald">
@@ -920,21 +920,7 @@
       const package = Array.from(data.entries()).map(entry => entry[0]).map(entry => prices[entry])
       const breakdownContainer = document.querySelector('#breakdown-container')
 
-      const currencyFormat = value => {
-        const splits = value.toFixed(2).split(".");
-        const integer = splits[0];
-        const decimal = splits[1];
-        const number = [];
-        const temp = [];
-
-        const b = integer.toString().split("");
-        for (let i = Math.ceil(integer.length / 3); i > 0; i--)
-          temp.push(b.splice(-3).join(""));
-        const x = temp.length;
-        for (let i = 0; i < x; i++) number.push(temp.pop());
-
-        return number.join(",") + "." + decimal;
-      };
+      const currencyFormat = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value)
 
       if (package.length) {
         window.scroll({ top: 350, left: 0, behavior: "smooth" })
@@ -950,7 +936,7 @@
             `
             <tr>
               <td class="px-4 lg:px-6 py-3 lg:py-4 whitespace-no-wrap border-b border-gray-200 bg-white">${item[0]}</td>
-              <td class="px-4 lg:px-6 py-3 lg:py-4 whitespace-no-wrap border-b border-gray-200 bg-white text-right font-semibold">$${currencyFormat(item[1])}</td>
+              <td class="px-4 lg:px-6 py-3 lg:py-4 whitespace-no-wrap border-b border-gray-200 bg-white text-right font-semibold">${currencyFormat(item[1])}</td>
             </tr>
             `
           )
@@ -968,7 +954,7 @@
               <th class="px-4 lg:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                 <h2 class="text-left text-sm font-bold uppercase tracking-wider">Total</h2>
               </th>
-              <th class="px-4 lg:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">$${sum}</th>
+              <th class="px-4 lg:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">${sum}</th>
             </tr>
           `
         )
@@ -976,7 +962,7 @@
         estimateContainer.classList.add('hidden')
       }
 
-
+      console.log(data)
     })
 
     form.addEventListener('reset', e => {
