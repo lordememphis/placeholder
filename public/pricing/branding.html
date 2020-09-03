@@ -344,8 +344,8 @@
     </section>
     <section class="py-20 lg:py-40 bg-rich-black-forga">
       <div class="lg:container mx-auto">
-        <div id="form-container">
-          <form class="mx-4 p-4 bg-white rounded-sm sm:p-8 lg:mx-8">
+        <div id="calculate-estimate-form-container">
+          <form id="calculate-estimate-form" class="mx-4 p-4 bg-white rounded-sm sm:p-8 lg:mx-8">
             <header>
               <h2 class="text-2xl lg:text-3xl font-bold">What’d you need for this project?</h2>
               <p class="text-shadow-blue">Customise your branding and design package by selecting what you'll need from
@@ -519,13 +519,13 @@
             </div>
             <footer class="mt-12">
               <div class="flex justify-between">
-                <button class="btn py-2 bg-rich-black-forga text-emerald">Calculate Price</button>
+                <button class="btn py-2 bg-emerald text-white">Calculate Price</button>
                 <button type="reset" class="btn py-2 bg-red-200 text-tart-orange">Reset</button>
               </div>
             </footer>
           </form>
         </div>
-        <div id="estimate" class="hidden lg:container mx-auto">
+        <div id="estimate-container" class="hidden lg:container mx-auto">
           <section class="mx-4 lg:mx-8 p-4 sm:p-8 bg-white rounded-sm">
             <header class="text-center">
               <h4 class="font-bold text-2xl lg:text-3xl">Estimated Branding and Design Cost: <span
@@ -577,11 +577,30 @@
                   </figure>
                   <span class="ml-2">Edit</span>
                 </button>
-                <button class="btn py-2 text-emerald bg-rich-black-forga text-sm uppercase tracking-wide">
-                  Request Project
-                </button>
+                <button type="button" id="select-project" class="btn py-2 bg-emerald text-white">Select Project</button>
               </div>
             </footer>
+          </section>
+          <section id="send-estimate-container" class="hidden mx-4 lg:mx-8 p-4 sm:p-8 bg-white rounded-sm">
+            <form id="send-request-email-form" class="max-w-md mx-auto p-8 shadow-xl rounded-md">
+              <div class="">
+                <div class="grid grid-cols-1 grid-flow-row gap-y-4">
+                  <div class="flex flex-col">
+                    <label for="firstname" class="text-sm">Your first name*</label>
+                    <input id="firstname" name="firstname" type="text" placeholder="Enter name" class="form-input" />
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="email" class="text-sm">Your email address*</label>
+                    <input id="email" name="email" type="email" placeholder="Enter email" class="form-input" />
+                  </div>
+                </div>
+                <div class="mt-8 text-center">
+                  <button class="btn bg-rich-black-forga text-emerald text-sm uppercase tracking-wider">Send
+                    Request
+                  </button>
+                </div>
+              </div>
+            </form>
           </section>
         </div>
       </div>
@@ -910,28 +929,33 @@
       "calendar": ['Calendar', 349.99]
     }
 
-    const formContainer = document.querySelector('#form-container')
-    const form = document.querySelector('form')
-    const estimateContainer = document.querySelector('#estimate')
+    const calculateEstimateFormContainer = document.querySelector('#calculate-estimate-form-container')
+    const calculateEstimateForm = document.querySelector('#calculate-estimate-form')
+    const estimateContainer = document.querySelector('#estimate-container')
+    const sendEstimateContainer = document.querySelector('#send-estimate-container')
 
-    form.addEventListener('submit', e => {
+    const currencyFormat = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value)
+
+    let package;
+    let packageTotal = 0
+
+    calculateEstimateForm.addEventListener('submit', e => {
       e.preventDefault()
-      const data = new FormData(form)
-      const package = Array.from(data.entries()).map(entry => entry[0]).map(entry => prices[entry])
+      const estimateData = new FormData(calculateEstimateForm)
+      package = Array.from(estimateData.entries()).map(entry => entry[0]).map(entry => prices[entry])
       const breakdownContainer = document.querySelector('#breakdown-container')
-
-      const currencyFormat = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value)
 
       if (package.length) {
         window.scroll({ top: 350, left: 0, behavior: "smooth" })
 
-        formContainer.classList.add('hidden')
+        calculateEstimateFormContainer.classList.add('hidden')
         estimateContainer.classList.remove('hidden')
         breakdownContainer.innerHTML = ''
 
         // document.querySelector('#calculate-cost').setAttribute('href', '#')
 
         package.forEach(item => {
+          packageTotal += item[1]
           breakdownContainer.insertAdjacentHTML('beforeend',
             `
             <tr>
@@ -942,11 +966,9 @@
           )
         })
 
-        let sum = 0
-        package.forEach(e => { sum += e[1] })
-        sum = currencyFormat(sum)
+        packageTotal = currencyFormat(packageTotal)
 
-        document.querySelector('#total').textContent = sum
+        document.querySelector('#total').textContent = packageTotal
 
         breakdownContainer.insertAdjacentHTML('beforeend',
           `
@@ -954,18 +976,16 @@
               <th class="px-4 lg:px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                 <h2 class="text-left text-sm font-bold uppercase tracking-wider">Total</h2>
               </th>
-              <th class="px-4 lg:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">${sum}</th>
+              <th class="px-4 lg:px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-right">${packageTotal}</th>
             </tr>
           `
         )
       } else {
         estimateContainer.classList.add('hidden')
       }
-
-      console.log(data)
     })
 
-    form.addEventListener('reset', e => {
+    calculateEstimateForm.addEventListener('reset', e => {
       Array.from(document.querySelectorAll('.checkbox')).forEach(container => { container.classList.remove('checked') })
       estimateContainer.classList.add('hidden')
       window.scroll({ top: 350, left: 0, behavior: "smooth" })
@@ -973,8 +993,23 @@
 
     document.querySelector('#edit-package').addEventListener('click', e => {
       window.scroll({ top: 350, left: 0, behavior: "smooth" })
-      formContainer.classList.remove('hidden')
+      calculateEstimateFormContainer.classList.remove('hidden')
       estimateContainer.classList.add('hidden')
+      sendEstimateContainer.classList.add('hidden')
+      packageTotal = 0
+    })
+
+    document.querySelector('#select-project').addEventListener('click', e => {
+      sendEstimateContainer.classList.remove('hidden')
+    })
+
+    const sendRequestEmailForm = document.querySelector('#send-request-email-form')
+
+    sendRequestEmailForm.addEventListener('submit', e => {
+      e.preventDefault()
+      const senderName = sendRequestEmailForm.elements['firstname'].value
+      const senderEmail = sendRequestEmailForm.elements['email'].value
+      alert(`Hi, I'm ${senderName} and I'd like to work on a Branding and Design Project with you. The project I've specified includes: ${package.map(entry => `${entry[0]} at ${currencyFormat(entry[1])}`).join(', ')} which totalled to ${packageTotal}`)
     })
   </script>
 </body>
