@@ -80,6 +80,9 @@ module.exports = {
           "900": "#263238",
         },
       },
+      spacing: {
+        "10vh": "10vh",
+      },
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],

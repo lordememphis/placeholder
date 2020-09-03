@@ -609,20 +609,20 @@
       <button id="overlay-cancel" tabindex="-1"
         class="hidden fixed inset-0 h-full w-full cursor-default focus:outline-none z-10 cancel"></button>
       <div id="request-container"
-        class="hidden p-4 h-screen fixed top-0 bg-rich-black-forga bg-opacity-50 z-20 overflow-y-auto"
-        style="padding-bottom: 10vh;">
-        <form class="bg-white shadow-xl rounded-md">
+        class="hidden p-4 pb-10vh w-full h-screen fixed top-0 bg-rich-black-forga bg-opacity-50 z-20 overflow-y-auto lg:p-0 lg:overflow-y-hidden">
+        <section class="hidden bg-emerald lg:block" style="width:500px; min-width: 400px;"></section>
+        <form class="bg-white shadow-xl rounded-md lg:shadow-none lg:rounded-none lg:p-4 lg:flex-grow">
           <div class="relative flex">
-            <span id="cancel-request"
-              class="absolute p-1 rounded-full shadow-md bg-white focus:outline-none cursor-pointer">
+            <button type="button" id="cancel-request"
+              class="absolute p-1 rounded-full shadow-md bg-white focus:outline-none cursor-pointer lg:mt-4 lg:mr-4">
               <svg class="w-4 h-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M6 18L18 6M6 6l12 12"></path>
               </svg>
-            </span>
+            </button>
           </div>
-          <div class="p-4">
-            <h4 class="text-2xl font-bold leading-tight">Let's collaborate on a project!</h4>
+          <div class="request-form-content p-4 lg:relative">
+            <h4 class="text-2xl font-bold leading-tight lg:text-4xl">Let's collaborate on a project!</h4>
             <p class="mt-2 text-shadow-blue">
               We just need some info and you’re good to go. Alternatively, you
               can
@@ -630,7 +630,7 @@
               us an email.
             </p>
             <section>
-              <div class="mt-8 grid grid-cols-1 grid-flow-row gap-y-4">
+              <div class="mt-8 grid grid-cols-1 grid-flow-row gap-y-4 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-8">
                 <div class="flex flex-col">
                   <label for="firstname" class="text-sm uppercase tracking-wider">First name</label>
                   <input id="firstname" type="text" placeholder="Enter name" class="form-input" />
@@ -656,9 +656,9 @@
                   <input id="deadline" type="date" placeholder="Specify time frame" class="form-input" />
                 </div>
               </div>
-              <div class="mt-6">
+              <div class="mt-6 lg:mt-8">
                 <h4 class="text-sm uppercase tracking-wider">Project type</h4>
-                <div class="mt-2 grid grid-cols-1 grid-flow-row gap-y-3">
+                <div class="mt-2 grid grid-cols-1 grid-flow-row gap-y-3 sm:grid-cols-3">
                   <div class="flex items-end">
                     <input id="bnd" type="checkbox" class="form-checkbox text-rich-black-forga" />
                     <label for="bnd" class="ml-2 text-base">Branding & Design</label>
@@ -673,12 +673,13 @@
                   </div>
                 </div>
               </div>
-              <div class="mt-6 flex flex-col">
+              <div class="mt-6 flex flex-col lg:mt-8">
                 <label for="description" class="text-sm uppercase tracking-wider">Project description</label>
                 <textarea id="description" class="form-textarea"></textarea>
               </div>
             </section>
-            <button type="submit" class="btn w-full mt-6 bg-rich-black-forga text-emerald uppercase tracking-wider">
+            <button type="submit"
+              class="btn w-full mt-6 bg-rich-black-forga text-emerald uppercase tracking-wider md:w-auto">
               Send Request
             </button>
           </div>
@@ -927,11 +928,13 @@
     Array.from(document.querySelectorAll('.btn-request')).forEach(button => {
       button.addEventListener('click', e => {
         document.querySelector('#request-container').classList.remove('hidden')
+        document.querySelector('#request-container').classList.add('lg:flex')
       })
     })
 
     document.querySelector('#cancel-request').addEventListener('click', e => {
       document.querySelector('#request-container').classList.add('hidden')
+      document.querySelector('#request-container').classList.remove('lg:flex')
     })
   </script>
 </body>
