@@ -587,16 +587,20 @@
                 <div class="grid grid-cols-1 grid-flow-row gap-y-4">
                   <div class="flex flex-col">
                     <label for="firstname" class="text-sm">Your first name*</label>
-                    <input id="firstname" name="firstname" type="text" placeholder="Enter name" class="form-input" />
+                    <input id="firstname" name="firstname" type="text" placeholder="Enter name" required
+                      class="form-input" />
                   </div>
                   <div class="flex flex-col">
                     <label for="email" class="text-sm">Your email address*</label>
-                    <input id="email" name="email" type="email" placeholder="Enter email" class="form-input" />
+                    <input id="email" name="email" type="email" placeholder="Enter email" required class="form-input" />
                   </div>
                 </div>
                 <div class="mt-8 text-center">
-                  <button class="btn bg-rich-black-forga text-emerald text-sm uppercase tracking-wider">Send
-                    Request
+                  <button class="btn bg-rich-black-forga inline-flex items-center">
+                    <span class="text-emerald text-sm uppercase tracking-wider">Send Request</span>
+                    <span id="send-request-spinner"
+                      class="ml-2 w-4 h-4 p-2 hidden border-2 border-mat-blue-gray-900 rounded-full animate-spin"
+                      style="border-top-color: #01D277; border-right-color: #01D277;"></span>
                   </button>
                 </div>
               </div>
@@ -853,6 +857,8 @@
       </div>
     </section>
   </footer>
+  </section>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     let menuDroppedown = false
     const toggleIcon = document.querySelector('#toggle-icon')
@@ -1005,11 +1011,59 @@
 
     const sendRequestEmailForm = document.querySelector('#send-request-email-form')
 
-    sendRequestEmailForm.addEventListener('submit', e => {
+    sendRequestEmailForm.addEventListener('submit', async e => {
       e.preventDefault()
       const senderName = sendRequestEmailForm.elements['firstname'].value
       const senderEmail = sendRequestEmailForm.elements['email'].value
-      alert(`Hi, I'm ${senderName} and I'd like to work on a Branding and Design Project with you. The project I've specified includes: ${package.map(entry => `${entry[0]} at ${currencyFormat(entry[1])}`).join(', ')} which totalled to ${packageTotal}`)
+      console.log(`Hi, I'm ${senderName} and I'd like to work on a Branding and Design Project with you. The project I've specified includes: ${package.map(entry => `${entry[0]} at ${currencyFormat(entry[1])}`).join(', ')} which totalled to ${packageTotal}`)
+
+      const spinner = document.querySelector('#send-request-spinner')
+      spinner.classList.remove('hidden')
+      const breakdown = `${package.map(entry => `<tr><td>${entry[0]}</td><td>${currencyFormat(entry[1])}</td></tr>`).join('')}`
+
+      const res = await Email.send({
+        SecureToken: 'fb52aec1-0562-447a-9917-ece6b77917da',
+        To: 'enquiries@irusedge.com',
+        From: "Irus Edge Mailing Services <mailer@irusedge.com>",
+        Subject: "New Gig! Testing...",
+        Body: `
+         <table align="center" cellpadding="10" cellspacing="0" width="600">
+          <thead>
+            <tr>
+              <th>Hi, Admin. You have a new gig! 🚀</th>
+            </tr>
+            <tr>
+              <th>A customer wants to collaborate with the agency on a branding and design project</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td> </td></tr>
+            <tr>
+              <td>The customer ${senderName}, has specified a ${packageTotal} project!</td>
+            </tr>
+            <tr><td> </td></tr>
+            <tr bgcolor="#f7fafc">
+              <td>Breakdown</td>
+            </tr>
+            <tr>
+              <td>
+                <table align="center" cellpadding="10" cellspacing="0" width="100%">
+                  ${package.map(entry => `<tr><td>${entry[0]}</td><td>${currencyFormat(entry[1])}</td></tr>`).join('')}  
+                </table>  
+              </td>
+            </tr>
+            <tr><td> </td></tr>
+          </tbody>
+          <tfoot>
+            <tr bgcolor="#f7fafc">
+              <td><a href="mailto:${senderEmail}">Engage ${senderName}</a></td>
+            </tr>
+          </tfoot>
+        </tbody>
+        `
+      })
+      spinner.classList.add('hidden')
+      alert(res)
     })
   </script>
 </body>
